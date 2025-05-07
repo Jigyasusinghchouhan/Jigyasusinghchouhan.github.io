@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Jigyasu Singh Chouhan Portfolio</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<!-- External CSS Files -->
+	<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+	<link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+	<link rel="stylesheet" href="css/animate.css">
+	<link rel="stylesheet" href="css/owl.carousel.min.css">
+	<link rel="stylesheet" href="css/owl.theme.default.min.css">
+	<link rel="stylesheet" href="css/magnific-popup.css">
+	<link rel="stylesheet" href="css/aos.css">
+	<link rel="stylesheet" href="css/ionicons.min.css">
+	<link rel="stylesheet" href="css/flaticon.css">
+	<link rel="stylesheet" href="css/icomoon.css">
+	<link rel="stylesheet" href="css/style.css">
+
+	<!-- Custom Inline Styles -->
+	<style>
+		/* About Section */
+		.about-mf .box-shadow-full {
+			padding-top: 4rem;
+			padding-bottom: 4rem;
+		}
+
+		.about-mf .about-img {
+			margin-bottom: 2rem;
+		}
+
+		.about-mf .about-img img {
+			margin-left: 10px;
+		}
+
+		.skill-mf .progress {
+			margin: .5rem 0 1.2rem 0;
+			border-radius: 0;
+			height: .7rem;
+		}
+
+		.skill-mf .progress .progress-bar {
+			height: .7rem;
+			background-color: #ffbd39;
+		}
+
+		/* Animation styles */
+		#typing-animation {
+			position: relative;
+			font-size: 30px;
+			font-weight: bold;
+			color: rgb(255, 255, 255);
+			overflow: hidden;
+			white-space: nowrap;
+			animation: typing 3s steps(20, end) infinite;
+		}
+
+		#typing-animation:before {
+			content: "";
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 5px;
+			height: 100%;
+			background-color: #ccc;
+			animation: typing-cursor 0.5s ease-in-out infinite;
+		}
+
+		@keyframes typing {
+			from {
+				width: 0;
+			}
+
+			to {
+				width: 100%;
+			}
+		}
+
+		@keyframes typing-cursor {
+			from {
+				width: 5px;
+			}
+
+			to {
+				width: 0;
+			}
+		}
+
+		/* Project image zoom effect */
+		.zoom-effect {
+			overflow: hidden;
+			transition: transform 0.3s ease-out;
+		}
+
+		.zoom-effect:hover {
+			transform: scale(1.1);
+		}
+
+		/* Section padding and styling */
+		.ftco-section.ftco-hireme {
+			padding-top: 50px;
+			padding-bottom: 50px;
+		}
+
+		.ftco-section .row.justify-content-center {
+			margin-top: 30px;
+		}
+
+		/* Custom Button Styling */
+		.btn-primary {
+			background-color: #007bff;
+			border: none;
+			color: white;
+			text-align: center;
+			text-decoration: none;
+			display: inline-block;
+			font-size: 16px;
+			padding: 10px 20px;
+			border-radius: 5px;
+			transition: background-color 0.3s ease;
+		}
+
+		.btn-primary:hover {
+			background-color: #0056b3;
+		}
+	</style>
+
+
+<body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+	<!-- Navbar -->
+	<nav class="navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light site-navbar-target" id="ftco-navbar">
+		<div class="container">
+			<a class="navbar-brand" href="index.html">Jigyasu Singh Chouhan</a>
+			<button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse"
+				data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="oi oi-menu"></span> Menu
+			</button>
+
+			<div class="collapse navbar-collapse" id="ftco-nav">
+				<ul class="navbar-nav ml-auto">
+					<li class="nav-item"><a href="#home-section" class="nav-link"><span>Home</span></a></li>
+					<li class="nav-item"><a href="#about-section" class="nav-link"><span>About</span></a></li>
+					<li class="nav-item"><a href="#resume-section" class="nav-link"><span>Resume</span></a></li>
+					<li class="nav-item"><a href="#project-section" class="nav-link"><span>Projects</span></a></li>
+					<li class="nav-item"><a href="#contact-section" class="nav-link"><span>Contact</span></a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+	<!-- Hero Section -->
+	<section id="home-section" class="hero">
+		<div class="home-slider owl-carousel">
+			<div class="slider-item">
+				<div class="overlay"></div>
+				<div class="container">
+					<div class="row d-md-flex no-gutters slider-text align-items-end justify-content-end"
+						data-scrollax-parent="true">
+						<div class="one-third js-fullheight order-md-last img"
+							style="background-image:url(images/bg_1.png);">
+							<div class="overlay"></div>
+						</div>
+						<div class="one-forth d-flex align-items-center ftco-animate"
+							data-scrollax=" properties: { translateY: '70%' }">
+							<div class="text">
+								<span class="subheading">Hello!</span>
+								<h1 class="mb-4 mt-3">I'm <span>Jigyasu Singh Chouhan</span></h1>
+
+								<!-- Animated Typing Effect -->
+								<span id="typing-animation"></span>
+
+								<script>
+									const typingAnimationElement = document.getElementById('typing-animation');
+
+									const typingTexts = ['DevOps Engineer', 'Cloud Automation Specialist', 'CI/CD Enthusiast'];
+
+									function playTypingAnimation(text) {
+										typingAnimationElement.textContent = '';  // Reset before starting animation
+										for (let i = 0; i < text.length; i++) {
+											setTimeout(() => {
+												typingAnimationElement.textContent += text[i];
+											}, i * 150);
+										}
+
+										setTimeout(() => {
+											playTypingAnimation(typingTexts[(typingTexts.indexOf(text) + 1) % typingTexts.length]);
+										}, text.length * 150 + 1000); // Delay before switching text
+									}
+
+									playTypingAnimation(typingTexts[0]);
+								</script>
+
+								<h2>A Junior DevOps Engineer</h2>
+								<p>
+									<a href="https://github.com/Jigyasusinghchouhan"
+										class="btn btn-white btn-outline-white py-3 px-4">Check My Work</a>
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+
+
+
+
+<!-- About Me section with profile and skills -->
+<section class="ftco-about img ftco-section ftco-no-pb" id="about-section">
+	<div class="container">
+		<div class="row">
+			<!-- Skills section (left side) -->
+			<div class="col-md-6 col-lg-5 d-flex">
+				<div class="img-about img d-flex align-items-stretch">
+					<div class="overlay">
+						<div class="row">
+							<div class="col-sm-6 col-md-5">
+								<div class="about-img">
+									<img src="images/about-me.png" class="img-fluid rounded b-shadow-a" alt="About Me">
+								</div>
+							</div>
+							<!-- Details next to profile image -->
+							<div class="col-sm-6 col-md-7">
+								<div class="about-info">
+									<p><span class="title-s">Name: </span><span>Jigyasu Singh Chouhan</span></p>
+									<p><span class="title-s">Job Role: </span><span>DevOps Engineer</span></p>
+									<p><span class="title-s">Experience: </span><span>1 Year, 1 Month</span></p>
+									<p><span class="title-s">Address: </span><span>Pune, India</span></p>
+								</div>
+							</div>
+						</div>
+
+						<!-- Skills with progress bars -->
+						<div class="skill-mf">
+							<p class="title-s">Skills</p>
+							<span><i class="fab fa-python"></i> Python</span> <span class="pull-right">60%</span>
+							<div class="progress">
+								<div class="progress-bar" role="progressbar" style="width: 60%;" aria-valuenow="60"
+									aria-valuemin="0" aria-valuemax="100"></div>
+							</div>
+
+							<span><i class="fab fa-docker"></i> Docker</span> <span class="pull-right">90%</span>
+							<div class="progress">
+								<div class="progress-bar" role="progressbar" style="width: 90%;" aria-valuenow="90"
+									aria-valuemin="0" aria-valuemax="100"></div>
+							</div>
+
+							<span><i class="fab fa-jenkins"></i> Jenkins</span> <span class="pull-right">90%</span>
+							<div class="progress">
+								<div class="progress-bar" role="progressbar" style="width: 90%;" aria-valuenow="90"
+									aria-valuemin="0" aria-valuemax="100"></div>
+							</div>
+
+							<span><i class="fab fa-aws"></i> Terraform</span> <span class="pull-right">60%</span>
+							<div class="progress">
+								<div class="progress-bar" role="progressbar" style="width: 60%;" aria-valuenow="60"
+									aria-valuemin="0" aria-valuemax="100"></div>
+							</div>
+
+							<span><i class="fab fa-suse"></i> SonarQube</span> <span class="pull-right">90%</span>
+							<div class="progress">
+								<div class="progress-bar" role="progressbar" style="width: 90%;" aria-valuenow="90"
+									aria-valuemin="0" aria-valuemax="100"></div>
+							</div>
+
+							<span><i class="fab fa-grafana"></i> Grafana</span> <span class="pull-right">70%</span>
+							<div class="progress">
+								<div class="progress-bar" role="progressbar" style="width: 70%;" aria-valuenow="70"
+									aria-valuemin="0" aria-valuemax="100"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- About Me section (right side) -->
+			<div class="col-md-6 col-lg-7 pl-lg-5 pb-5">
+				<div class="row justify-content-start pb-3">
+					<div class="col-md-12 heading-section ftco-animate">
+						<h1 class="big">Profile</h1>
+						<h2 class="mb-4">About Me</h2>
+						<p>I am a skilled DevOps Engineer with a proven track record of deploying, configuring, and
+							managing complex applications using modern technologies and best practices. I am
+							proficient
+							in Python, SQL, Git, AWS, Azure, Linux, Docker, Jenkins CI/CD, Terraform, Ansible,
+							Kubernetes, and more. I excel in automation, configuration management, and monitoring,
+							committed to ensuring robust deployments and continuous learning.</p>
+
+						<ul style="list-style: none; padding: 0;">
+							<li class="d-flex align-items-center mb-2"><span class="font-weight-bold"
+									style="width: 120px;">Profile:</span> DevOps & Engineer</li>
+							<li class="d-flex align-items-center mb-2"><span class="font-weight-bold"
+									style="width: 120px;">Domain:</span> DevOps Engineer, Software Engineer, SRE,
+								Cloud
+								Engineer</li>
+							<li class="d-flex align-items-center mb-2"><span class="font-weight-bold"
+									style="width: 120px;">Education:</span> Masters of Computer Applications</li>
+							<li class="d-flex align-items-center mb-2"><span class="font-weight-bold"
+									style="width: 120px;">Language:</span> English, Hindi</li>
+							<li class="d-flex align-items-center mb-2"><span class="font-weight-bold"
+									style="width: 120px;">BI Tools:</span> Jenkins, Docker, SonarQube</li>
+							<li class="d-flex align-items-center mb-2"><span class="font-weight-bold"
+									style="width: 120px;">Other Skills:</span> Cloud, PySpark, Excel, Git, JIRA</li>
+							<li class="d-flex align-items-center mb-2"><span class="font-weight-bold"
+									style="width: 120px;">Interest:</span> Traveling, Travel Photography, Gaming
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<!-- Full height centered section -->
+<div class="container-fluid d-flex justify-content-center align-items-center" style="height: auto; min-height: 200px;">
+	<div class="counter-wrap ftco-animate text-center">
+		<p class="mb-4">
+			<span class="number" data-number="30">0</span> <span>+</span>
+			<span>&nbsp; Projects completed</span>
+		</p>
+		<p>
+			<a href="https://www.linkedin.com/in/jigyasusinghchouahn/" class="btn btn-primary py-3 px-3">LinkedIn</a>
+		</p>
+	</div>
+</div>
+
+<!-- Experience Section -->
+<div class="row">
+	<!-- Sigma Solve Inc (Junior DevOps Engineer) -->
+	<div class="col-md-6">
+		<div class="resume-wrap ftco-animate">
+			<span class="date">Mar 2024 - Present</span>
+			<h2>Junior DevOps Engineer</h2>
+			<span class="position">Sigma Solve Inc, Ahmedabad, India</span>
+			<p class="mt-4">
+				Increased deployment efficiency by 30% through the deployment of complex applications using
+				Docker, achieving reliable and efficient performance.
+			<ul>
+				<li>Resolved 95% of critical database connectivity and page redirection issues, ensuring a seamless
+					user
+					experience.</li>
+				<li>Configured SonarQube for multiple projects, maintaining high code quality and security standards
+					with 90% code coverage.</li>
+				<li>Automated email notifications in CI/CD pipelines for various projects, enhancing communication
+					and
+					tracking by 40%.</li>
+				<li>Managed permissions and server access configurations for automation tools, ensuring secure and
+					efficient operations.</li>
+				<li>Troubleshot and resolved Jenkins SonarQube scan issues and integrated legacy projects, improving
+					pipeline stability by 25%.</li>
+				<li>Implemented Grafana notifications and installed Windows Exporter, improving monitoring and
+					alerting
+					efficiency by 50%.</li>
+				<li>Developed and maintained comprehensive documentation for configurations and deployments,
+					facilitating team collaboration and reducing onboarding time by 20%.</li>
+			</ul>
+			</p>
+		</div>
+	</div>
+
+	<!-- Sigma Solve Inc (DevOps Engineer Trainee) -->
+	<div class="col-md-6">
+		<div class="resume-wrap ftco-animate">
+			<span class="date">Nov 2023 - Mar 2024</span>
+			<h2>DevOps Engineer Trainee</h2>
+			<span class="position">Sigma Solve Inc, Ahmedabad, India</span>
+			<p class="mt-4">
+			<ul>
+				<li>Configured SonarQube, achieving 90% code coverage and maintaining high code quality and security
+					standards.</li>
+				<li>Automated email notifications in CI/CD pipelines, enhancing communication and tracking by 40%.
+				</li>
+				<li>Implemented Grafana notifications and installed Windows Exporter, improving site and server
+					monitoring efficiency by 50%.</li>
+			</ul>
+			</p>
+		</div>
+	</div>
+</div>
+
+<br><br>
+
+<!-- Education Section -->
+<div class="row">
+	<h1 class="big-4">Education</h1>
+	<div class="underline"></div>
+</div>
+<br>
+
+<div class="row">
+	<!-- MCA -->
+	<div class="col-md-6">
+		<div class="resume-wrap ftco-animate">
+			<span class="date">Jul 2022 - Jul 2024</span>
+			<h2>Master of Computer Applications (MCA)</h2>
+			<span class="position">MIT World Peace University, Pune, India</span>
+			<p class="mt-4">GPA: 7.0</p>
+		</div>
+	</div>
+
+	<!-- BCA -->
+	<div class="col-md-6">
+		<div class="resume-wrap ftco-animate">
+			<span class="date">Jul 2019 - Jun 2022</span>
+			<h2>Bachelor of Computer Applications (BCA)</h2>
+			<span class="position">SP College, Mohanlal Sukhadia University, Udaipur, India</span>
+			<p class="mt-4">GPA: 7.0</p>
+		</div>
+	</div>
+</div>
+
+<!-- Download CV Button -->
+<div class="row justify-content-center mt-5">
+	<div class="col-md-6 text-center ftco-animate">
+		<p><a href="https://drive.google.com/file/d/1ylXwgS-uogIYmpSTdTB9ujiu_VIxTGx-/view?usp=sharing"
+				class="btn btn-primary py-4 px-5" target="_blank">Download CV</a></p>
+	</div>
+</div>
+
+<!-- Projects Section -->
+<section class="ftco-section" id="project-section">
+	<div class="container">
+		<div class="row justify-content-center mb-5 pb-5">
+			<div class="col-md-7 heading-section text-center ftco-animate">
+				<h1 class="big big-2">Projects</h1>
+				<h2 class="mb-4">Projects</h2>
+				<p>Below are the sample DevOps and automation projects related to CI/CD, Cloud Infrastructure, and
+					Docker.</p>
+			</div>
+		</div>
+
+		<div class="row d-flex">
+			<!-- Project 1: Django CI/CD with Jenkins -->
+			<div class="col-md-4 d-flex ftco-animate">
+				<div class="blog-entry justify-content-end">
+					<a href="https://github.com/yourusername/Django-CI-CD-Jenkins-Terraform-Docker"
+						class="block-20 zoom-effect" style="background-image: url('images/proj_1.jpg');">
+					</a>
+					<div class="text mt-3 float-right d-block">
+						<h3 class="heading">
+							<a href="https://github.com/Jigyasusinghchouhan/django-notes-app.git">
+								Django CI/CD with Jenkins, Terraform, Docker, Kubernetes, SonarQube, ArgoCD, AWS
+								EC2/EKS,
+								and GitHub Actions
+							</a>
+						</h3>
+						<p>Developed a robust CI/CD pipeline for Django applications using Jenkins, Terraform, Docker,
+							Kubernetes, and AWS services. Automated the entire deployment pipeline from code commit to
+							production release.</p>
+					</div>
+				</div>
+			</div>
+
+			<!-- Project 2: Streamlining Django Deployment -->
+			<div class="col-md-4 d-flex ftco-animate">
+				<div class="blog-entry justify-content-end">
+					<a href="https://github.com/yourusername/Streamlining-Django-Deployment"
+						class="block-20 zoom-effect" style="background-image: url('images/proj_2.jpg');">
+					</a>
+					<div class="text mt-3 float-right d-block">
+						<h3 class="heading">
+							<a href="https://github.com/yourusername/Streamlining-Django-Deployment">
+								Streamlining Django Deployment
+							</a>
+						</h3>
+						<p>Optimized the deployment of Django apps with a three-tier architecture, utilizing SonarQube
+							for code quality checks, Git for version control, and Jenkins for automation, alongside AWS
+							for cloud hosting.</p>
+					</div>
+				</div>
+			</div>
+
+			<!-- Project 3: Timetable Generation System (TTGS) -->
+			<div class="col-md-4 d-flex ftco-animate">
+				<div class="blog-entry justify-content-end">
+					<a href="https://github.com/Jigyasusinghchouhan/Timetable-Generation-System.git"
+						class="block-20 zoom-effect" style="background-image: url('images/proj_3.jpg');">
+					</a>
+					<div class="text mt-3 float-right d-block">
+						<h3 class="heading">
+							<a href="https://github.com/Jigyasusinghchouhan/Timetable-Generation-System.git">
+								Timetable Generation System (TTGS)
+							</a>
+						</h3>
+						<p>Designed a web-based application for automating the creation of academic timetables.
+							Integrated DevOps tools like Docker, Jenkins, and AWS for seamless deployment, enhancing
+							operational efficiency for educational institutions.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<!-- More Projects Section -->
+<div class="ftco-section ftco-hireme img margin-top" style="background-image: url('images/bg_1.jpg');">
+	<div class="row justify-content-center">
+		<div class="col-md-7 ftco-animate text-center">
+			<h2>More projects on <span>GitHub</span></h2>
+			<div class="heading">
+				<h4>I thrive on optimizing systems & automating workflows to deliver seamless DevOps solutions.</h4>
+				<br>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- GitHub Button Outside the Section -->
+<div class="text-center">
+	<p><a href="https://github.com/Jigyasusinghchouhan" class="btn btn-primary py-3 px-5" target="_blank"
+			rel="noopener noreferrer">Visit My GitHub</a></p>
+</div>
+
+
+
+
+
+
+
+<!-- Contact Section -->
+<section class="ftco-section contact-section ftco-no-pb" id="contact-section">
+	<div class="container">
+		<div class="row justify-content-center mb-5 pb-3">
+			<div class="col-md-7 heading-section text-center ftco-animate">
+				<h1 class="big big-2">Contact</h1>
+				<h2 class="mb-4">Contact Me</h2>
+				<p>Below are the details to reach out to me!</p>
+			</div>
+		</div>
+
+		<div class="row d-flex contact-info mb-5">
+			<div class="col-md-6 col-lg-3 d-flex ftco-animate">
+				<div class="align-self-stretch box p-4 text-center">
+					<div class="icon d-flex align-items-center justify-content-center">
+						<span class="icon-map-signs"></span>
+					</div>
+					<h3 class="mb-4">Address</h3>
+					<p>Pune, India</p>
+				</div>
+			</div>
+
+			<div class="col-md-6 col-lg-3 d-flex ftco-animate">
+				<div class="align-self-stretch box p-4 text-center">
+					<div class="icon d-flex align-items-center justify-content-center">
+						<span class="icon-phone2"></span>
+					</div>
+					<h3 class="mb-4">Contact Number</h3>
+					<p><a href="tel://918619708469">+ 91 8619708469</a></p>
+				</div>
+			</div>
+
+			<div class="col-md-6 col-lg-3 d-flex ftco-animate">
+				<div class="align-self-stretch box p-4 text-center">
+					<div class="icon d-flex align-items-center justify-content-center">
+						<span class="icon-paper-plane"></span>
+					</div>
+					<h3 class="mb-4">Email Address</h3>
+					<p><a href="mailto:jigyashu2001@gmail.com">jigyashu2001@gmail.com</a></p>
+				</div>
+			</div>
+
+			<div class="col-md-6 col-lg-3 d-flex ftco-animate">
+				<div class="align-self-stretch box p-4 text-center">
+					<div class="icon d-flex align-items-center justify-content-center">
+						<span class="icon-globe"></span>
+					</div>
+					<h3 class="mb-4">Download Resume</h3>
+					<p><a href="https://drive.google.com/file/d/1ylXwgS-uogIYmpSTdTB9ujiu_VIxTGx-/view?usp=sharing"
+							target="_blank">View Resume</a></p>
+
+
+				</div>
+			</div>
+		</div>
+	</div>
+	</div>
+
+	<!-- Social Links -->
+	<div class="container">
+		<ul class="ftco-footer-social list-unstyled d-flex justify-content-center align-items-center mb-0">
+			<li class="ftco-animate">
+				<a href="https://www.linkedin.com/in/jigyasusinghchouahn/"><span class="icon-linkedin"></span></a>
+			</li>
+			<li class="ftco-animate">
+				<a href="https://www.instagram.com/jigyasu_singh_/"><span class="icon-instagram"></span></a>
+			</li>
+		</ul>
+	</div>
+	</div>
+</section>
+
+<!-- Footer Section -->
+<footer class="ftco-footer ftco-section">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12 text-center">
+				<p>&copy;
+					<script>document.write(new Date().getFullYear());</script> All rights reserved | This template
+					is made with <i class="icon-heart color-danger" aria-hidden="true"></i> by <a
+						href="https://colorlib.com" target="_blank">Colorlib</a>
+				</p>
+			</div>
+		</div>
+	</div>
+</footer>
+
+<!-- Loader -->
+<div id="ftco-loader" class="show fullscreen">
+	<svg class="circular" width="48px" height="48px">
+		<circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee" />
+		<circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10"
+			stroke="#F96D00" />
+	</svg>
+</div>
+
+<!-- Scripts -->
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery-migrate-3.0.1.min.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.easing.1.3.js"></script>
+<script src="js/jquery.waypoints.min.js"></script>
+<script src="js/jquery.stellar.min.js"></script>
+<script src="js/owl.carousel.min.js"></script>
+<script src="js/jquery.magnific-popup.min.js"></script>
+<script src="js/aos.js"></script>
+<script src="js/jquery.animateNumber.min.js"></script>
+<script src="js/scrollax.min.js"></script>
+<script src="js/main.js"></script>
+
+</body>
+
+</html>
