@@ -3,46 +3,732 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Portfolio of Jigyasusingh Chouhan, showcasing projects and skills in web development and design">
-    <title>Jigyasusingh Chouhan - Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
+    
+    <!-- Primary Meta Tags -->
+    <title>Jigyasu Singh Chouhan - DevOps Engineer | Cloud Architect | Kubernetes Expert</title>
+    <meta name="title" content="Jigyasu Singh Chouhan - DevOps Engineer | Cloud Architect | Kubernetes Expert">
+    <meta name="description" content="Senior DevOps Engineer specializing in cloud infrastructure, Kubernetes orchestration, CI/CD automation, and platform engineering. Expert in AWS, Azure, Docker, Terraform, and GitOps workflows.">
+    <meta name="keywords" content="DevOps, Cloud Architecture, Kubernetes, Docker, AWS, Azure, CI/CD, Terraform, GitOps, Infrastructure as Code, Platform Engineering, Site Reliability Engineering, DevSecOps">
+    <meta name="author" content="Jigyasu Singh Chouhan">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://jigyasusinghchouhan.github.io/">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://jigyasusinghchouhan.github.io/">
+    <meta property="og:title" content="Jigyasu Singh Chouhan - DevOps Engineer | Cloud Architect">
+    <meta property="og:description" content="Senior DevOps Engineer specializing in cloud infrastructure, Kubernetes orchestration, CI/CD automation, and platform engineering.">
+    <meta property="og:image" content="https://jigyasusinghchouhan.github.io/images/og-image.jpg">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://jigyasusinghchouhan.github.io/">
+    <meta property="twitter:title" content="Jigyasu Singh Chouhan - DevOps Engineer | Cloud Architect">
+    <meta property="twitter:description" content="Senior DevOps Engineer specializing in cloud infrastructure, Kubernetes orchestration, CI/CD automation, and platform engineering.">
+    <meta property="twitter:image" content="https://jigyasusinghchouhan.github.io/images/twitter-image.jpg">
+    
+    <!-- Favicon -->
     <link rel="icon" href="favicon.ico" type="image/x-icon">
-    <script defer src="script.js"></script>
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    
+    <!-- Preconnect for Performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Schema.org Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Jigyasu Singh Chouhan",
+      "jobTitle": "DevOps Engineer",
+      "description": "Senior DevOps Engineer specializing in cloud infrastructure, Kubernetes orchestration, and platform engineering",
+      "url": "https://jigyasusinghchouhan.github.io/",
+      "email": "jigyashu2001@gmail.com",
+      "knowsAbout": ["DevOps", "Cloud Computing", "Kubernetes", "Docker", "AWS", "Azure", "CI/CD", "Terraform", "GitOps", "Infrastructure as Code"]
+    }
+    </script>
 </head>
 <body>
-    <header>
-        <h1>Welcome to My Portfolio</h1>
-        <nav>
-            <ul>
-                <li><a href="#about">About</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
+    <!-- Skip to main content for accessibility -->
+    <a href="#main-content" class="skip-to-content" aria-label="Skip to main content">Skip to main content</a>
+    
+    <!-- Navigation -->
+    <nav id="navbar" class="navbar" role="navigation" aria-label="Main navigation">
+        <div class="container nav-container">
+            <a href="#home" class="logo" aria-label="Home">
+                <span class="logo-text">JSC</span>
+            </a>
+            
+            <button id="hamburger" class="hamburger" type="button" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-menu">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+            
+            <ul id="nav-menu" class="nav-menu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#experience" class="nav-link">Experience</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
             </ul>
-        </nav>
-    </header>
-    <main>
-        <section id="about">
-            <h2>About Me</h2>
-            <p>I'm a passionate web developer experienced in building efficient and scalable web applications.</p>
+        </div>
+    </nav>
+    
+    <!-- Main Content -->
+    <main id="main-content">
+        
+        <!-- Hero Section -->
+        <section id="home" class="hero section" aria-labelledby="hero-title">
+            <div class="cursor-glow" aria-hidden="true"></div>
+            <div class="hero-background" aria-hidden="true"></div>
+            <div class="container">
+                <div class="hero-content">
+                    <p class="hero-greeting" data-aos="fade-up">Hello, I'm</p>
+                    <h1 id="hero-title" class="hero-name" data-aos="fade-up" data-aos-delay="100">
+                        Jigyasu Singh Chouhan
+                    </h1>
+                    <div class="hero-title-wrapper" data-aos="fade-up" data-aos-delay="200">
+                        <h2 class="hero-title">
+                            <span id="typing-text" class="typing-text"></span>
+                            <span class="typing-cursor" aria-hidden="true">|</span>
+                        </h2>
+                    </div>
+                    <p class="hero-description" data-aos="fade-up" data-aos-delay="300">
+                        Senior DevOps Engineer specializing in cloud infrastructure, Kubernetes orchestration, 
+                        and building scalable CI/CD pipelines. Passionate about automation, infrastructure as code, 
+                        and platform engineering.
+                    </p>
+                    <div class="hero-buttons" data-aos="fade-up" data-aos-delay="400">
+                        <a href="#projects" class="btn btn-primary" aria-label="View my projects">
+                            View My Work
+                        </a>
+                        <a href="#contact" class="btn btn-secondary" aria-label="Contact me">
+                            Get In Touch
+                        </a>
+                    </div>
+                </div>
+            </div>
         </section>
-        <section id="projects">
-            <h2>My Projects</h2>
-            <article>
-                <h3>Project 1</h3>
-                <p>Description of Project 1.</p>
-            </article>
-            <article>
-                <h3>Project 2</h3>
-                <p>Description of Project 2.</p>
-            </article>
+        
+        <!-- About Section -->
+        <section id="about" class="about section" aria-labelledby="about-title">
+            <div class="container">
+                <h2 id="about-title" class="section-title" data-aos="fade-up">About Me</h2>
+                
+                <div class="about-content">
+                    <div class="about-text" data-aos="fade-right">
+                        <p class="about-paragraph">
+                            I'm a passionate DevOps Engineer with extensive experience in designing, implementing, 
+                            and maintaining cloud-native infrastructures. My expertise spans across multiple cloud 
+                            platforms, container orchestration, and automation technologies.
+                        </p>
+                        <p class="about-paragraph">
+                            With a strong focus on reliability, scalability, and security, I help organizations 
+                            transform their development workflows and accelerate their path to production. I believe 
+                            in Infrastructure as Code, GitOps principles, and continuous improvement.
+                        </p>
+                        <p class="about-paragraph">
+                            Currently focusing on AI workload management, platform engineering, and building 
+                            self-service infrastructure platforms that empower development teams.
+                        </p>
+                    </div>
+                    
+                    <div class="about-skills" data-aos="fade-left">
+                        <h3 class="skills-subtitle">Core Competencies</h3>
+                        <div class="skill-bars">
+                            <div class="skill-bar">
+                                <div class="skill-info">
+                                    <span class="skill-name">Cloud Platforms (AWS, Azure, GCP)</span>
+                                    <span class="skill-percentage">95%</span>
+                                </div>
+                                <div class="skill-progress">
+                                    <div class="skill-progress-bar" data-width="95" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-info">
+                                    <span class="skill-name">Kubernetes & Container Orchestration</span>
+                                    <span class="skill-percentage">92%</span>
+                                </div>
+                                <div class="skill-progress">
+                                    <div class="skill-progress-bar" data-width="92" role="progressbar" aria-valuenow="92" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-info">
+                                    <span class="skill-name">CI/CD & GitOps (Jenkins, GitLab, ArgoCD)</span>
+                                    <span class="skill-percentage">90%</span>
+                                </div>
+                                <div class="skill-progress">
+                                    <div class="skill-progress-bar" data-width="90" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-info">
+                                    <span class="skill-name">Infrastructure as Code (Terraform, Ansible)</span>
+                                    <span class="skill-percentage">88%</span>
+                                </div>
+                                <div class="skill-progress">
+                                    <div class="skill-progress-bar" data-width="88" role="progressbar" aria-valuenow="88" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-info">
+                                    <span class="skill-name">Monitoring & Observability</span>
+                                    <span class="skill-percentage">85%</span>
+                                </div>
+                                <div class="skill-progress">
+                                    <div class="skill-progress-bar" data-width="85" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
-        <section id="contact">
-            <h2>Contact Me</h2>
-            <p>You can reach me at <a href="mailto:jigyasusinghchouhan@example.com">jigyasusinghchouhan@example.com</a>.</p>
+        
+        <!-- Skills & Expertise Section -->
+        <section id="skills" class="skills section" aria-labelledby="skills-title">
+            <div class="container">
+                <h2 id="skills-title" class="section-title" data-aos="fade-up">Skills & Expertise</h2>
+                
+                <div class="skill-cards">
+                    <article class="skill-card" data-aos="zoom-in" data-aos-delay="100">
+                        <div class="skill-icon" aria-hidden="true">☁️</div>
+                        <h3 class="skill-title">Cloud Platforms</h3>
+                        <ul class="skill-list">
+                            <li>AWS (EC2, ECS, EKS, Lambda, S3, RDS)</li>
+                            <li>Azure (AKS, App Services, Functions)</li>
+                            <li>Google Cloud Platform (GKE, Cloud Run)</li>
+                            <li>Multi-cloud architecture design</li>
+                        </ul>
+                    </article>
+                    
+                    <article class="skill-card" data-aos="zoom-in" data-aos-delay="200">
+                        <div class="skill-icon" aria-hidden="true">🐳</div>
+                        <h3 class="skill-title">Containerization</h3>
+                        <ul class="skill-list">
+                            <li>Docker & Docker Compose</li>
+                            <li>Kubernetes (K8s) orchestration</li>
+                            <li>Helm charts & package management</li>
+                            <li>Container security & optimization</li>
+                        </ul>
+                    </article>
+                    
+                    <article class="skill-card" data-aos="zoom-in" data-aos-delay="300">
+                        <div class="skill-icon" aria-hidden="true">🔄</div>
+                        <h3 class="skill-title">CI/CD Automation</h3>
+                        <ul class="skill-list">
+                            <li>Jenkins pipelines & automation</li>
+                            <li>GitLab CI/CD & GitHub Actions</li>
+                            <li>ArgoCD & Flux for GitOps</li>
+                            <li>Automated testing & deployment</li>
+                        </ul>
+                    </article>
+                    
+                    <article class="skill-card" data-aos="zoom-in" data-aos-delay="100">
+                        <div class="skill-icon" aria-hidden="true">🏗️</div>
+                        <h3 class="skill-title">Infrastructure as Code</h3>
+                        <ul class="skill-list">
+                            <li>Terraform for cloud provisioning</li>
+                            <li>Ansible for configuration management</li>
+                            <li>CloudFormation & ARM templates</li>
+                            <li>Pulumi & CDK frameworks</li>
+                        </ul>
+                    </article>
+                    
+                    <article class="skill-card" data-aos="zoom-in" data-aos-delay="200">
+                        <div class="skill-icon" aria-hidden="true">📊</div>
+                        <h3 class="skill-title">Monitoring & Logging</h3>
+                        <ul class="skill-list">
+                            <li>Prometheus & Grafana dashboards</li>
+                            <li>ELK Stack (Elasticsearch, Logstash, Kibana)</li>
+                            <li>Datadog & New Relic APM</li>
+                            <li>Distributed tracing & alerting</li>
+                        </ul>
+                    </article>
+                    
+                    <article class="skill-card" data-aos="zoom-in" data-aos-delay="300">
+                        <div class="skill-icon" aria-hidden="true">🔒</div>
+                        <h3 class="skill-title">Security & Compliance</h3>
+                        <ul class="skill-list">
+                            <li>DevSecOps practices & tools</li>
+                            <li>Vault for secrets management</li>
+                            <li>Container security scanning</li>
+                            <li>Compliance automation (SOC2, HIPAA)</li>
+                        </ul>
+                    </article>
+                </div>
+            </div>
         </section>
+        
+        <!-- AI & Intelligent Systems Infrastructure -->
+        <section class="skills section ai-infrastructure" aria-labelledby="ai-infrastructure-title">
+            <div class="container">
+                <h2 id="ai-infrastructure-title" class="section-title" data-aos="fade-up">AI & Intelligent Systems Infrastructure</h2>
+                
+                <div class="skill-cards">
+                    <article class="skill-card" data-aos="zoom-in" data-aos-delay="100">
+                        <div class="skill-icon" aria-hidden="true">🤖</div>
+                        <h3 class="skill-title">AI Workload Management</h3>
+                        <ul class="skill-list">
+                            <li>GPU cluster orchestration (NVIDIA, AMD)</li>
+                            <li>ML pipeline automation (Kubeflow, MLflow)</li>
+                            <li>Model serving infrastructure (TensorFlow Serving, TorchServe)</li>
+                            <li>Distributed training frameworks (Horovod, Ray)</li>
+                        </ul>
+                    </article>
+                    
+                    <article class="skill-card" data-aos="zoom-in" data-aos-delay="200">
+                        <div class="skill-icon" aria-hidden="true">⚡</div>
+                        <h3 class="skill-title">LLM & GenAI Operations</h3>
+                        <ul class="skill-list">
+                            <li>LLM deployment & scaling strategies</li>
+                            <li>Vector database management (Pinecone, Weaviate)</li>
+                            <li>Prompt engineering infrastructure</li>
+                            <li>AI model versioning & A/B testing</li>
+                        </ul>
+                    </article>
+                    
+                    <article class="skill-card" data-aos="zoom-in" data-aos-delay="300">
+                        <div class="skill-icon" aria-hidden="true">🎯</div>
+                        <h3 class="skill-title">MLOps & AIOps</h3>
+                        <ul class="skill-list">
+                            <li>End-to-end ML lifecycle management</li>
+                            <li>Feature store implementation</li>
+                            <li>Model monitoring & drift detection</li>
+                            <li>AI-powered incident response automation</li>
+                        </ul>
+                    </article>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Platform & Automation Engineering -->
+        <section class="skills section platform-engineering" aria-labelledby="platform-engineering-title">
+            <div class="container">
+                <h2 id="platform-engineering-title" class="section-title" data-aos="fade-up">Platform & Automation Engineering</h2>
+                
+                <div class="skill-cards">
+                    <article class="skill-card" data-aos="zoom-in" data-aos-delay="100">
+                        <div class="skill-icon" aria-hidden="true">🚀</div>
+                        <h3 class="skill-title">GitOps & IaC</h3>
+                        <ul class="skill-list">
+                            <li>ArgoCD & Flux CD implementations</li>
+                            <li>Terraform Enterprise & Cloud</li>
+                            <li>Policy as Code (OPA, Sentinel)</li>
+                            <li>Config management at scale</li>
+                        </ul>
+                    </article>
+                    
+                    <article class="skill-card" data-aos="zoom-in" data-aos-delay="200">
+                        <div class="skill-icon" aria-hidden="true">🔧</div>
+                        <h3 class="skill-title">Developer Platforms</h3>
+                        <ul class="skill-list">
+                            <li>Internal developer portals (Backstage)</li>
+                            <li>Self-service infrastructure provisioning</li>
+                            <li>Golden path templates & scaffolding</li>
+                            <li>Platform API design & documentation</li>
+                        </ul>
+                    </article>
+                    
+                    <article class="skill-card" data-aos="zoom-in" data-aos-delay="300">
+                        <div class="skill-icon" aria-hidden="true">⚙️</div>
+                        <h3 class="skill-title">Automation & Scripting</h3>
+                        <ul class="skill-list">
+                            <li>Python, Bash, PowerShell scripting</li>
+                            <li>Workflow orchestration (Airflow, Argo Workflows)</li>
+                            <li>API integration & webhook automation</li>
+                            <li>Custom operator & controller development</li>
+                        </ul>
+                    </article>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Projects Section -->
+        <section id="projects" class="projects section" aria-labelledby="projects-title">
+            <div class="container">
+                <h2 id="projects-title" class="section-title" data-aos="fade-up">Featured Projects</h2>
+                
+                <div class="project-filters" data-aos="fade-up" data-aos-delay="100">
+                    <button class="filter-btn active" data-filter="all" type="button">All Projects</button>
+                    <button class="filter-btn" data-filter="cloud" type="button">Cloud</button>
+                    <button class="filter-btn" data-filter="kubernetes" type="button">Kubernetes</button>
+                    <button class="filter-btn" data-filter="cicd" type="button">CI/CD</button>
+                    <button class="filter-btn" data-filter="automation" type="button">Automation</button>
+                </div>
+                
+                <div class="project-grid">
+                    <article class="project-card" data-category="kubernetes cicd" data-aos="fade-up" data-aos-delay="100">
+                        <div class="project-image">
+                            <img src="images/project-k8s-platform.jpg" alt="Enterprise Kubernetes Platform" loading="lazy">
+                            <div class="project-overlay">
+                                <a href="#" class="project-link" aria-label="View Enterprise Kubernetes Platform project">View Project</a>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">Enterprise Kubernetes Platform</h3>
+                            <p class="project-description">
+                                Built a multi-cluster Kubernetes platform serving 200+ microservices with automated 
+                                deployments, monitoring, and self-healing capabilities.
+                            </p>
+                            <div class="project-tags">
+                                <span class="project-tag">Kubernetes</span>
+                                <span class="project-tag">ArgoCD</span>
+                                <span class="project-tag">Prometheus</span>
+                                <span class="project-tag">Istio</span>
+                            </div>
+                        </div>
+                    </article>
+                    
+                    <article class="project-card" data-category="cloud automation" data-aos="fade-up" data-aos-delay="200">
+                        <div class="project-image">
+                            <img src="images/project-terraform.jpg" alt="Multi-Cloud IaC Framework" loading="lazy">
+                            <div class="project-overlay">
+                                <a href="#" class="project-link" aria-label="View Multi-Cloud IaC Framework project">View Project</a>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">Multi-Cloud IaC Framework</h3>
+                            <p class="project-description">
+                                Designed and implemented a comprehensive Terraform framework for provisioning 
+                                infrastructure across AWS, Azure, and GCP with unified policies.
+                            </p>
+                            <div class="project-tags">
+                                <span class="project-tag">Terraform</span>
+                                <span class="project-tag">AWS</span>
+                                <span class="project-tag">Azure</span>
+                                <span class="project-tag">OPA</span>
+                            </div>
+                        </div>
+                    </article>
+                    
+                    <article class="project-card" data-category="cicd automation" data-aos="fade-up" data-aos-delay="300">
+                        <div class="project-image">
+                            <img src="images/project-cicd.jpg" alt="Zero-Touch CI/CD Pipeline" loading="lazy">
+                            <div class="project-overlay">
+                                <a href="#" class="project-link" aria-label="View Zero-Touch CI/CD Pipeline project">View Project</a>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">Zero-Touch CI/CD Pipeline</h3>
+                            <p class="project-description">
+                                Architected a fully automated CI/CD pipeline with integrated security scanning, 
+                                testing, and progressive deployment strategies.
+                            </p>
+                            <div class="project-tags">
+                                <span class="project-tag">GitLab CI</span>
+                                <span class="project-tag">Docker</span>
+                                <span class="project-tag">SonarQube</span>
+                                <span class="project-tag">Nexus</span>
+                            </div>
+                        </div>
+                    </article>
+                    
+                    <article class="project-card" data-category="cloud kubernetes" data-aos="fade-up" data-aos-delay="100">
+                        <div class="project-image">
+                            <img src="images/project-serverless.jpg" alt="Serverless Data Pipeline" loading="lazy">
+                            <div class="project-overlay">
+                                <a href="#" class="project-link" aria-label="View Serverless Data Pipeline project">View Project</a>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">Serverless Data Pipeline</h3>
+                            <p class="project-description">
+                                Developed a serverless data processing pipeline using AWS Lambda, S3, and 
+                                EventBridge to handle 1M+ events daily.
+                            </p>
+                            <div class="project-tags">
+                                <span class="project-tag">AWS Lambda</span>
+                                <span class="project-tag">S3</span>
+                                <span class="project-tag">DynamoDB</span>
+                                <span class="project-tag">EventBridge</span>
+                            </div>
+                        </div>
+                    </article>
+                    
+                    <article class="project-card" data-category="kubernetes automation" data-aos="fade-up" data-aos-delay="200">
+                        <div class="project-image">
+                            <img src="images/project-monitoring.jpg" alt="Observability Stack" loading="lazy">
+                            <div class="project-overlay">
+                                <a href="#" class="project-link" aria-label="View Observability Stack project">View Project</a>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">Observability Stack</h3>
+                            <p class="project-description">
+                                Implemented a comprehensive observability solution with metrics, logs, and traces 
+                                for distributed microservices architecture.
+                            </p>
+                            <div class="project-tags">
+                                <span class="project-tag">Prometheus</span>
+                                <span class="project-tag">Grafana</span>
+                                <span class="project-tag">Loki</span>
+                                <span class="project-tag">Tempo</span>
+                            </div>
+                        </div>
+                    </article>
+                    
+                    <article class="project-card" data-category="cloud cicd" data-aos="fade-up" data-aos-delay="300">
+                        <div class="project-image">
+                            <img src="images/project-security.jpg" alt="DevSecOps Automation" loading="lazy">
+                            <div class="project-overlay">
+                                <a href="#" class="project-link" aria-label="View DevSecOps Automation project">View Project</a>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">DevSecOps Automation</h3>
+                            <p class="project-description">
+                                Integrated security scanning and compliance checks into CI/CD pipeline with 
+                                automated remediation workflows.
+                            </p>
+                            <div class="project-tags">
+                                <span class="project-tag">Trivy</span>
+                                <span class="project-tag">Vault</span>
+                                <span class="project-tag">Falco</span>
+                                <span class="project-tag">OPA</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Experience Section -->
+        <section id="experience" class="experience section" aria-labelledby="experience-title">
+            <div class="container">
+                <h2 id="experience-title" class="section-title" data-aos="fade-up">Professional Experience</h2>
+                
+                <div class="timeline">
+                    <article class="timeline-item" data-aos="fade-up" data-aos-delay="100">
+                        <div class="timeline-marker" aria-hidden="true"></div>
+                        <div class="timeline-content">
+                            <span class="timeline-date">2023 - Present</span>
+                            <h3 class="timeline-title">Senior DevOps Engineer</h3>
+                            <h4 class="timeline-company">Tech Company</h4>
+                            <p class="timeline-description">
+                                Leading the DevOps team in building and maintaining cloud infrastructure for 
+                                mission-critical applications. Implemented GitOps workflows, automated deployments, 
+                                and improved system reliability by 99.9%.
+                            </p>
+                            <ul class="timeline-highlights">
+                                <li>Reduced deployment time by 75% through CI/CD automation</li>
+                                <li>Migrated 50+ applications to Kubernetes</li>
+                                <li>Implemented comprehensive monitoring and alerting</li>
+                            </ul>
+                        </div>
+                    </article>
+                    
+                    <article class="timeline-item" data-aos="fade-up" data-aos-delay="200">
+                        <div class="timeline-marker" aria-hidden="true"></div>
+                        <div class="timeline-content">
+                            <span class="timeline-date">2021 - 2023</span>
+                            <h3 class="timeline-title">DevOps Engineer</h3>
+                            <h4 class="timeline-company">Software Solutions Inc</h4>
+                            <p class="timeline-description">
+                                Managed AWS infrastructure and implemented Infrastructure as Code practices. 
+                                Built CI/CD pipelines and automated deployment processes for multiple applications.
+                            </p>
+                            <ul class="timeline-highlights">
+                                <li>Designed and deployed multi-region AWS architecture</li>
+                                <li>Automated infrastructure provisioning with Terraform</li>
+                                <li>Implemented security best practices and compliance</li>
+                            </ul>
+                        </div>
+                    </article>
+                    
+                    <article class="timeline-item" data-aos="fade-up" data-aos-delay="300">
+                        <div class="timeline-marker" aria-hidden="true"></div>
+                        <div class="timeline-content">
+                            <span class="timeline-date">2019 - 2021</span>
+                            <h3 class="timeline-title">Junior DevOps Engineer</h3>
+                            <h4 class="timeline-company">StartUp Technologies</h4>
+                            <p class="timeline-description">
+                                Started my DevOps journey by managing cloud infrastructure, writing deployment 
+                                scripts, and maintaining CI/CD pipelines. Learned containerization and orchestration.
+                            </p>
+                            <ul class="timeline-highlights">
+                                <li>Containerized legacy applications with Docker</li>
+                                <li>Set up monitoring and logging solutions</li>
+                                <li>Contributed to infrastructure automation</li>
+                            </ul>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Professional Focus 2026 -->
+        <section class="focus section" aria-labelledby="focus-title">
+            <div class="container">
+                <h2 id="focus-title" class="section-title" data-aos="fade-up">Professional Focus 2026</h2>
+                
+                <div class="focus-grid">
+                    <article class="focus-card" data-aos="zoom-in" data-aos-delay="100">
+                        <div class="focus-icon" aria-hidden="true">🎯</div>
+                        <h3 class="focus-title">AI Infrastructure & MLOps</h3>
+                        <p class="focus-description">
+                            Building scalable infrastructure for AI workloads, focusing on GPU orchestration, 
+                            model serving, and ML pipeline automation.
+                        </p>
+                    </article>
+                    
+                    <article class="focus-card" data-aos="zoom-in" data-aos-delay="200">
+                        <div class="focus-icon" aria-hidden="true">🚀</div>
+                        <h3 class="focus-title">Platform Engineering</h3>
+                        <p class="focus-description">
+                            Creating self-service developer platforms and internal tools to improve developer 
+                            experience and accelerate delivery.
+                        </p>
+                    </article>
+                    
+                    <article class="focus-card" data-aos="zoom-in" data-aos-delay="300">
+                        <div class="focus-icon" aria-hidden="true">🔐</div>
+                        <h3 class="focus-title">Cloud Native Security</h3>
+                        <p class="focus-description">
+                            Implementing security best practices, zero-trust architecture, and automated 
+                            compliance for cloud-native applications.
+                        </p>
+                    </article>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Contact Section -->
+        <section id="contact" class="contact section" aria-labelledby="contact-title">
+            <div class="container">
+                <h2 id="contact-title" class="section-title" data-aos="fade-up">Get In Touch</h2>
+                <p class="contact-subtitle" data-aos="fade-up" data-aos-delay="100">
+                    Have a project in mind or want to discuss DevOps strategies? Let's connect!
+                </p>
+                
+                <div class="contact-content">
+                    <form id="contact-form" class="contact-form" data-aos="fade-up" data-aos-delay="200" novalidate>
+                        <div class="form-group">
+                            <label for="name" class="form-label">Name</label>
+                            <input 
+                                type="text" 
+                                id="name" 
+                                name="name" 
+                                class="form-input" 
+                                required 
+                                aria-required="true"
+                                placeholder="Your name"
+                            >
+                            <span class="form-error" id="name-error" role="alert"></span>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email" class="form-label">Email</label>
+                            <input 
+                                type="email" 
+                                id="email" 
+                                name="email" 
+                                class="form-input" 
+                                required 
+                                aria-required="true"
+                                placeholder="your.email@example.com"
+                            >
+                            <span class="form-error" id="email-error" role="alert"></span>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="subject" class="form-label">Subject</label>
+                            <input 
+                                type="text" 
+                                id="subject" 
+                                name="subject" 
+                                class="form-input" 
+                                required 
+                                aria-required="true"
+                                placeholder="What's this about?"
+                            >
+                            <span class="form-error" id="subject-error" role="alert"></span>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message" class="form-label">Message</label>
+                            <textarea 
+                                id="message" 
+                                name="message" 
+                                class="form-textarea" 
+                                rows="5" 
+                                required 
+                                aria-required="true"
+                                placeholder="Tell me about your project..."
+                            ></textarea>
+                            <span class="form-error" id="message-error" role="alert"></span>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary btn-submit">
+                            Send Message
+                        </button>
+                        <div class="form-success" id="form-success" role="status" aria-live="polite"></div>
+                    </form>
+                    
+                    <div class="contact-info" data-aos="fade-up" data-aos-delay="300">
+                        <div class="contact-item">
+                            <div class="contact-icon" aria-hidden="true">📧</div>
+                            <div class="contact-details">
+                                <h3 class="contact-label">Email</h3>
+                                <a href="mailto:jigyashu2001@gmail.com" class="contact-value">jigyashu2001@gmail.com</a>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon" aria-hidden="true">💼</div>
+                            <div class="contact-details">
+                                <h3 class="contact-label">LinkedIn</h3>
+                                <a href="https://www.linkedin.com/in/jigyasu-singh-chouhan" target="_blank" rel="noopener noreferrer" class="contact-value">Connect with me</a>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon" aria-hidden="true">🐙</div>
+                            <div class="contact-details">
+                                <h3 class="contact-label">GitHub</h3>
+                                <a href="https://github.com/Jigyasusinghchouhan" target="_blank" rel="noopener noreferrer" class="contact-value">View my code</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
     </main>
-    <footer>
-        <p>&copy; 2026 Jigyasusingh Chouhan. All rights reserved.</p>
+    
+    <!-- Footer -->
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-content">
+                <p class="footer-text">
+                    &copy; 2026 Jigyasu Singh Chouhan. All rights reserved.
+                </p>
+                <div class="footer-links">
+                    <a href="https://github.com/Jigyasusinghchouhan" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile">GitHub</a>
+                    <a href="https://www.linkedin.com/in/jigyasu-singh-chouhan" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile">LinkedIn</a>
+                    <a href="mailto:jigyashu2001@gmail.com" aria-label="Email me">Email</a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Back to Top Button -->
+        <button id="back-to-top" class="back-to-top" type="button" aria-label="Back to top">
+            <span aria-hidden="true">↑</span>
+        </button>
     </footer>
+    
+    <!-- Scripts -->
+    <script defer src="script.js"></script>
 </body>
 </html>
