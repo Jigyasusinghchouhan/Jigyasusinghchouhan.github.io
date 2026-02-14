@@ -806,11 +806,11 @@ class ContactForm {
     if (submitBtn) {
       const originalText = submitBtn.textContent;
       submitBtn.textContent = 'Opening email client...';
-      submitBtn.style.backgroundColor = '#10b981';
+      submitBtn.classList.add('btn-success-state');
       
       setTimeout(() => {
         submitBtn.textContent = originalText;
-        submitBtn.style.backgroundColor = '';
+        submitBtn.classList.remove('btn-success-state');
       }, 2000);
     }
   }

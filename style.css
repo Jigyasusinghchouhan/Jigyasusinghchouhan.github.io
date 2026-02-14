@@ -506,6 +506,10 @@ a:focus-visible {
     }
 }
 
+.btn-success-state {
+    background: linear-gradient(135deg, #10b981, #059669) !important;
+}
+
 .btn-secondary {
     background: transparent;
     color: var(--text-primary);
