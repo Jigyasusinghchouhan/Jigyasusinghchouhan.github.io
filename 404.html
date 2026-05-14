@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 | Pod Not Found</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap');
+        body { font-family: 'JetBrains Mono', monospace; background-color: #0f172a; color: #10b981; }
+        .glitch { animation: glitch 1s linear infinite; }
+        @keyframes glitch {
+            2%, 64% { transform: translate(2px,0) skew(0deg); }
+            4%, 60% { transform: translate(-2px,0) skew(0deg); }
+            62% { transform: translate(0,0) skew(5deg); }
+        }
+    </style>
+</head>
+<body class="flex flex-col items-center justify-center min-h-screen p-6 text-center">
+    <div class="max-w-2xl w-full bg-slate-900 border border-slate-700 rounded-xl shadow-2xl overflow-hidden text-left">
+        <div class="flex items-center gap-2 px-4 py-3 bg-slate-950 border-b border-slate-800">
+            <div class="w-3 h-3 rounded-full bg-red-500"></div>
+            <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
+            <div class="w-3 h-3 rounded-full bg-green-500"></div>
+            <span class="ml-4 text-slate-500 text-xs">root@kubernetes-cluster:~</span>
+        </div>
+        <div class="p-8 text-sm md:text-base leading-relaxed">
+            <p class="text-red-400 mb-4 font-bold glitch">Error: 404 - ImagePullBackOff / PodNotFound</p>
+            <p class="mb-2 text-slate-300">$ kubectl get pods --namespace=portfolio</p>
+            <p class="text-slate-500 mb-6">No resources found in portfolio namespace.<br>The page you are looking for has been evicted, scaled to 0, or never existed.</p>
+            <p class="mb-4 text-slate-300">$ systemctl status routing-service</p>
+            <p class="text-slate-500 mb-8">● routing-service.service - Portfolio Router<br>
+               Loaded: loaded (/etc/systemd/system/routing.service; enabled)<br>
+               Active: <span class="text-red-400">failed (Result: exit-code)</span>
+            </p>
+            
+            <a href="/" class="inline-flex items-center gap-2 px-6 py-3 bg-emerald-500/10 text-emerald-400 border border-emerald-500/50 rounded hover:bg-emerald-500/20 transition-colors focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2 focus:ring-offset-slate-900">
+                <span class="font-bold">&gt; kubectl restart routing-service &amp;&amp; cd /home</span>
+            </a>
+        </div>
+    </div>
+</body>
+</html>

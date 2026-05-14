@@ -1,606 +1,1570 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Jigyasu Singh Chouhan - DevOps Engineer specializing in Cloud Infrastructure, Kubernetes, CI/CD, and AWS">
-    <meta name="keywords" content="DevOps, Cloud Engineer, AWS, Kubernetes, CI/CD, Infrastructure, Terraform, Docker">
+    <meta name="description"
+        content="Jigyasu Singh Chouhan - DevOps & Platform Engineer specializing in Cloud Infrastructure, AI/LLM Deployments, and Kubernetes">
+    <meta name="keywords"
+        content="DevOps, Platform Engineer, AWS, Azure, Kubernetes, CI/CD, Infrastructure, Terraform, Docker, LLM Deployment, GPU Infrastructure">
     <meta name="author" content="Jigyasu Singh Chouhan">
-    
+
     <!-- Open Graph Meta Tags -->
-    <meta property="og:title" content="Jigyasu Singh Chouhan - DevOps Engineer">
-    <meta property="og:description" content="Building Scalable Cloud Infrastructure | AWS | Kubernetes | CI/CD">
+    <meta property="og:title" content="Jigyasu Singh Chouhan - DevOps & Platform Engineer">
+    <meta property="og:description"
+        content="Building scalable cloud infrastructure, CI/CD systems, and AI-ready platforms.">
     <meta property="og:type" content="website">
-    
-    <title>Jigyasu Singh Chouhan | DevOps Engineer</title>
-    
+    <meta property="og:url" content="https://jigyasusinghchouhan.github.io/">
+    <meta property="og:image" content="https://jigyasusinghchouhan.github.io/og-image.png">
+
+    <!-- Twitter Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta property="twitter:domain" content="jigyasusinghchouhan.github.io">
+    <meta property="twitter:url" content="https://jigyasusinghchouhan.github.io/">
+    <meta name="twitter:title" content="Jigyasu Singh Chouhan - DevOps & Platform Engineer">
+    <meta name="twitter:description" content="Building scalable cloud infrastructure, CI/CD systems, and AI-ready platforms.">
+    <meta name="twitter:image" content="https://jigyasusinghchouhan.github.io/og-image.png">
+
     <!-- Favicon -->
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%3C/text%3E%3C/svg%3E">
+    <link rel="icon" type="image/svg+xml"
+        href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%3C/text%3E%3C/svg%3E">
+
+    <title>Jigyasu Singh Chouhan | DevOps & Platform Engineer</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;700&display=swap');
+
+        :root {
+            --brand-primary: #7c3aed;
+            /* Violet 600 */
+            --brand-secondary: #d946ef;
+            /* Fuchsia 500 */
+            --bg-canvas: #f8fafc;
+            /* Slate 50 */
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-canvas);
+            color: #1e293b;
+            scroll-behavior: smooth;
+            position: relative;
+            overflow-x: hidden;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        .nav-brand {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+
+        .mono {
+            font-family: 'JetBrains Mono', monospace;
+        }
+
+        /* Animated Backgrounds */
+        .bg-grid {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background-size: 40px 40px;
+            background-image: linear-gradient(to right, rgba(124, 58, 237, 0.04) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(124, 58, 237, 0.04) 1px, transparent 1px);
+            z-index: -2;
+            pointer-events: none;
+        }
+
+        .bg-shapes {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            z-index: -1;
+            overflow: hidden;
+            pointer-events: none;
+        }
+
+        .shape-1 {
+            position: absolute;
+            top: -10%;
+            left: -10%;
+            width: 50vw;
+            height: 50vw;
+            background: radial-gradient(circle, rgba(124, 58, 237, 0.08) 0%, rgba(124, 58, 237, 0) 70%);
+            border-radius: 50%;
+            animation: float-bg 20s ease-in-out infinite alternate;
+        }
+
+        .shape-2 {
+            position: absolute;
+            bottom: -20%;
+            right: -10%;
+            width: 60vw;
+            height: 60vw;
+            background: radial-gradient(circle, rgba(217, 70, 239, 0.08) 0%, rgba(217, 70, 239, 0) 70%);
+            border-radius: 50%;
+            animation: float-bg 25s ease-in-out infinite alternate-reverse;
+        }
+
+        @keyframes float-bg {
+            0% {
+                transform: translate(0, 0) scale(1);
+            }
+
+            100% {
+                transform: translate(5%, 10%) scale(1.1);
+            }
+        }
+
+        /* Floating Icons */
+        .animate-float {
+            animation: float-icon 6s ease-in-out infinite;
+        }
+
+        .animate-float-delayed {
+            animation: float-icon 8s ease-in-out infinite alternate-reverse;
+        }
+
+        @keyframes float-icon {
+            0% {
+                transform: translateY(0px) rotate(0deg);
+            }
+
+            50% {
+                transform: translateY(-20px) rotate(10deg);
+            }
+
+            100% {
+                transform: translateY(0px) rotate(0deg);
+            }
+        }
+
+        .glass-nav {
+            background: rgba(255, 255, 255, 0.6);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.03);
+        }
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.8);
+            box-shadow: 0 10px 40px -10px rgba(124, 58, 237, 0.08);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .icon-container {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .glass-card:hover .icon-container {
+            transform: scale(1.1) rotate(5deg) translateY(-2px);
+            box-shadow: 0 10px 25px -5px rgba(124, 58, 237, 0.3);
+        }
+
+        .glass-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 25px 50px -12px rgba(124, 58, 237, 0.2);
+            border-color: rgba(124, 58, 237, 0.3);
+            background: rgba(255, 255, 255, 0.95);
+        }
+
+        .metric-card {
+            background: #ffffff;
+            border: 1px solid rgba(226, 232, 240, 0.8);
+            border-radius: 1.5rem;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.02);
+        }
+
+        .metric-card:hover {
+            border-color: #c4b5fd;
+            transform: translateY(-6px) scale(1.02);
+            box-shadow: 0 20px 25px -5px rgba(124, 58, 237, 0.15), 0 8px 10px -6px rgba(124, 58, 237, 0.1);
+        }
+
+        .skill-pill {
+            background: rgba(255, 255, 255, 0.8);
+            border: 1px solid #e2e8f0;
+            color: #475569;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .skill-pill:hover {
+            background: linear-gradient(135deg, #f3e8ff 0%, #fae8ff 100%);
+            border-color: #d8b4fe;
+            color: #7c3aed;
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 8px 15px rgba(124, 58, 237, 0.15);
+        }
+
+        .gradient-text {
+            background: linear-gradient(135deg, #7c3aed 0%, #d946ef 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .gradient-bg {
+            background: linear-gradient(135deg, #7c3aed 0%, #d946ef 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .gradient-bg::after {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.3) 50%, rgba(255, 255, 255, 0) 100%);
+            transform: rotate(45deg) translate(-50%, -50%);
+            animation: shimmer 3s infinite;
+        }
+
+        @keyframes shimmer {
+            0% {
+                transform: rotate(45deg) translate(-100%, -100%);
+            }
+
+            100% {
+                transform: rotate(45deg) translate(100%, 100%);
+            }
+        }
+
+        .connect-btn {
+            background: linear-gradient(135deg, #7c3aed 0%, #c026d3 100%);
+            box-shadow: 0 4px 15px rgba(124, 58, 237, 0.3);
+            transition: all 0.3s ease;
+        }
+
+        .connect-btn:hover {
+            box-shadow: 0 8px 25px rgba(124, 58, 237, 0.5);
+            transform: translateY(-2px);
+        }
+
+        .diagram-placeholder {
+            background: repeating-linear-gradient(45deg,
+                    rgba(226, 232, 240, 0.4),
+                    rgba(226, 232, 240, 0.4) 10px,
+                    rgba(241, 245, 249, 0.4) 10px,
+                    rgba(241, 245, 249, 0.4) 20px);
+            border: 2px dashed #cbd5e1;
+            transition: all 0.3s ease;
+        }
+
+        .diagram-placeholder:hover {
+            border-color: #a78bfa;
+            background: rgba(139, 92, 246, 0.05);
+        }
+
+        /* Continuous Pulse for Availability Dot */
+        .pulse-dot {
+            box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7);
+            animation: pulse-ring 2s infinite cubic-bezier(0.66, 0, 0, 1);
+        }
+
+        @keyframes pulse-ring {
+            100% {
+                box-shadow: 0 0 0 10px rgba(16, 185, 129, 0);
+            }
+        }
     
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
-    
-    <!-- Styles -->
-    <link rel="stylesheet" href="style.css">
+        .dark {
+            --bg-canvas: #0f172a;
+            color: #f8fafc;
+        }
+        .dark .bg-grid {
+            background-image: linear-gradient(to right, rgba(124, 58, 237, 0.1) 1px, transparent 1px),
+                              linear-gradient(to bottom, rgba(124, 58, 237, 0.1) 1px, transparent 1px);
+        }
+        .dark .glass-nav {
+            background: rgba(15, 23, 42, 0.7);
+            border-bottom: 1px solid rgba(30, 41, 59, 0.8);
+        }
+        .dark .glass-card {
+            background: rgba(30, 41, 59, 0.6);
+            border: 1px solid rgba(51, 65, 85, 0.8);
+        }
+        .dark .glass-card:hover {
+            background: rgba(30, 41, 59, 0.9);
+            border-color: rgba(124, 58, 237, 0.4);
+            box-shadow: 0 25px 50px -12px rgba(124, 58, 237, 0.15);
+        }
+        .dark .metric-card {
+            background: #1e293b;
+            border-color: #334155;
+        }
+        .dark .metric-card:hover {
+            border-color: #a78bfa;
+        }
+        .dark .skill-pill {
+            background: rgba(30, 41, 59, 0.8);
+            border-color: #334155;
+            color: #cbd5e1;
+        }
+        .dark .skill-pill:hover {
+            background: linear-gradient(135deg, rgba(124,58,237,0.2) 0%, rgba(217,70,239,0.2) 100%);
+            border-color: #a78bfa;
+            color: #e9d5ff;
+        }
+        .dark .diagram-placeholder {
+            background: repeating-linear-gradient(45deg, rgba(30,41,59,0.4), rgba(30,41,59,0.4) 10px, rgba(15,23,42,0.4) 10px, rgba(15,23,42,0.4) 20px);
+            border-color: #475569;
+        }
+
+    </style>
+
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+        }
+        
+        function toggleDarkMode() {
+            document.documentElement.classList.toggle('dark');
+            const isDark = document.documentElement.classList.contains('dark');
+            localStorage.setItem('theme', isDark ? 'dark' : 'light');
+        }
+        
+        if (localStorage.getItem('theme') === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('dark');
+        } else {
+            document.documentElement.classList.remove('dark');
+        }
+    </script>
+
 </head>
-<body>
+
+<body class="antialiased">
+    <div class="bg-grid"></div>
+    <div class="bg-shapes">
+        <div class="shape-1"></div>
+        <div class="shape-2"></div>
+    </div>
+
     <!-- Navigation -->
-    <nav class="navbar" id="navbar">
-        <div class="container">
-            <a href="#hero" class="logo">Jigyasu Singh Chouhan</a>
-            <ul class="nav-menu" id="nav-menu">
-                <li><a href="#hero" class="nav-link">Home</a></li>
-                <li><a href="#about" class="nav-link">About</a></li>
-                <li><a href="#skills" class="nav-link">Skills</a></li>
-                <li><a href="#projects" class="nav-link">Projects</a></li>
-                <li><a href="#experience" class="nav-link">Experience</a></li>
-                <li><a href="#contact" class="nav-link">Contact</a></li>
-            </ul>
-            <div class="hamburger" id="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
+    <nav class="fixed top-0 w-full z-50 glass-nav">
+        <div class="max-w-7xl mx-auto px-6 md:px-8 h-16 flex items-center justify-between">
+            <div class="flex items-center gap-3" data-aos="fade-down">
+                <div
+                    class="w-8 h-8 gradient-bg rounded-xl flex items-center justify-center text-white font-bold text-sm shadow-lg shadow-violet-500/30">
+                    J</div>
+                <span class="font-bold tracking-tight text-slate-800 dark:text-slate-100 nav-brand text-lg">Jigyasu Singh Chouhan</span>
+            </div>
+            <div class="hidden md:flex items-center gap-6 lg:gap-8 text-sm font-semibold text-slate-600 dark:text-slate-300"
+                data-aos="fade-down" data-aos-delay="100">
+                <a href="#about" class="hover:text-violet-600 transition-colors flex items-center gap-1"><i
+                        data-lucide="user" class="w-4 h-4"></i> About</a>
+                <a href="#stack" class="hover:text-violet-600 transition-colors flex items-center gap-1"><i
+                        data-lucide="layers" class="w-4 h-4"></i> Stack</a>
+                <a href="#projects" class="hover:text-violet-600 transition-colors flex items-center gap-1"><i
+                        data-lucide="briefcase" class="w-4 h-4"></i> Projects</a>
+                <a href="#experience" class="hover:text-violet-600 transition-colors flex items-center gap-1"><i
+                        data-lucide="history" class="w-4 h-4"></i> Experience</a>
+                <a href="mailto:jigyashu2001@gmail.com"
+                    class="connect-btn text-white px-5 py-2 rounded-full text-xs font-bold tracking-wide flex items-center gap-2"><i
+                        data-lucide="mail" class="w-3.5 h-3.5"></i> Connect</a>
             </div>
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section id="hero" class="hero">
-        <div class="hero-background"></div>
-        <div class="container hero-content">
-            <div class="hero-text">
-                <h1 class="hero-title">
-                    Building Scalable<br>
-                    <span class="gradient-text">Cloud Infrastructure</span>
+    <main class="pt-24 pb-20 relative z-10">
+        <!-- Hero Section -->
+        <section id="hero" class="max-w-7xl mx-auto px-6 md:px-8 py-20 md:py-24 relative">
+
+            <!-- Floating Decorative Icons -->
+            <div class="absolute top-20 right-[10%] animate-float text-violet-300 hidden md:block">
+                <i data-lucide="hexagon" class="w-16 h-16 opacity-50"></i>
+            </div>
+            <div class="absolute bottom-32 left-[5%] animate-float-delayed text-fuchsia-300 hidden md:block">
+                <i data-lucide="box" class="w-12 h-12 opacity-50"></i>
+            </div>
+            <div class="absolute top-40 left-[15%] animate-float text-blue-300 hidden lg:block">
+                <i data-lucide="cloud-lightning" class="w-10 h-10 opacity-40"></i>
+            </div>
+
+            <div class="max-w-4xl relative z-10">
+                <div class="inline-flex items-center gap-2 mb-8 px-4 py-2 rounded-full bg-white/80 dark:bg-slate-800/80 border border-violet-100 dark:border-violet-900/50 shadow-sm backdrop-blur-sm hover:scale-105 transition-transform cursor-default"
+                    data-aos="fade-up">
+                    <span class="w-2.5 h-2.5 bg-emerald-500 rounded-full pulse-dot"></span>
+                    <span
+                        class="text-[11px] font-bold uppercase tracking-widest text-slate-600 dark:text-slate-300 flex items-center gap-1">
+                        Available for Pune | Bangalore | Remote
+                    </span>
+                </div>
+
+                <h1 class="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-extrabold text-slate-900 dark:text-white mb-8 leading-[1.1] tracking-tight"
+                    data-aos="fade-up" data-aos-delay="100">
+                    Building <span class="gradient-text">scalable cloud infrastructure</span>, CI/CD systems, and
+                    AI-ready platforms.
                 </h1>
-                <p class="hero-subtitle">DevOps & Cloud Engineer | Kubernetes | AWS | DevSecOps | AI Infrastructure | Platform Engineering</p>
-                <p class="hero-credibility">Building scalable, secure, and AI-ready cloud infrastructure for modern distributed systems.</p>
-                <div class="typing-container">
-                    <span class="typing-text" id="typing-text"></span>
-                    <span class="cursor">|</span>
+
+                <p class="text-lg md:text-xl lg:text-2xl text-slate-600 dark:text-slate-300 leading-relaxed max-w-3xl mb-12 font-medium"
+                    data-aos="fade-up" data-aos-delay="200">
+                    DevOps & Platform Engineer with experience in AWS, Azure, GPU infrastructure, observability,
+                    automation, and production systems.
+                </p>
+
+                <!-- Hero CTAs -->
+                <div class="flex flex-wrap items-center gap-4 mb-16" data-aos="fade-up" data-aos-delay="300">
+                    <a href="#projects"
+                        class="connect-btn text-white px-8 py-4 rounded-full text-sm font-bold tracking-wide flex items-center gap-2 group">
+                        <i data-lucide="rocket" class="w-4 h-4 group-hover:animate-bounce"></i>
+                        <span>View Projects</span>
+                    </a>
+                    <a href="./Jigyasu%20Singh%20Chouhan_2026.pdf"
+                        target="_blank"
+                        class="px-8 py-4 rounded-full text-sm font-bold tracking-wide bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-200 hover:bg-slate-50 hover:border-violet-300 transition-all shadow-sm flex items-center gap-2 group">
+                        <i data-lucide="download" class="w-4 h-4 group-hover:translate-y-1 transition-transform"></i>
+                        <span>Download Resume</span>
+                    </a>
+                    <a href="#contact"
+                        class="px-6 py-4 rounded-full text-sm font-bold tracking-wide text-slate-600 dark:text-slate-300 hover:text-violet-600 transition-colors flex items-center gap-2">
+                        <i data-lucide="send" class="w-4 h-4"></i> Contact Me
+                    </a>
+                    <div class="flex items-center gap-3 pl-4 border-l border-slate-200 dark:border-slate-700">
+                        <a href="https://github.com/Jigyasusinghchouhan" target="_blank" aria-label="GitHub"
+                            class="p-2.5 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-full text-slate-500 dark:text-slate-400 hover:text-violet-600 hover:border-violet-300 shadow-sm transition-all hover:scale-110">
+                            <i data-lucide="github" class="w-5 h-5"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/jigyasusinghchouahn/" target="_blank" aria-label="LinkedIn"
+                            class="p-2.5 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-full text-slate-500 dark:text-slate-400 hover:text-violet-600 hover:border-violet-300 shadow-sm transition-all hover:scale-110">
+                            <i data-lucide="linkedin" class="w-5 h-5"></i>
+                        </a>
+                    </div>
                 </div>
-                <div class="hero-buttons">
-                    <a href="#projects" class="btn btn-primary">View Projects</a>
-                    <a href="https://drive.google.com/file/d/1S3k8vHTS0z_-tklcF8lTIOASkm7AjKSv/view?usp=sharing" target="_blank" class="btn btn-secondary">Download Resume</a>
+
+                <div class="mt-8 inline-flex items-center gap-3 px-4 py-2 bg-slate-900 rounded-lg shadow-lg border border-slate-700 group cursor-pointer" onclick="navigator.clipboard.writeText('docker pull jigyasu/resume:latest'); const t = this.querySelector('.copy-text'); t.innerText = 'Copied!'; setTimeout(() => t.innerText = 'Copy', 2000);" data-aos="fade-up" data-aos-delay="400">
+                    <i data-lucide="terminal" class="w-4 h-4 text-emerald-400"></i>
+                    <code class="text-sm text-slate-300 mono">docker pull jigyasu/resume:latest</code>
+                    <span class="copy-text text-[10px] font-bold uppercase tracking-wider text-slate-500 group-hover:text-violet-400 transition-colors ml-2 border-l border-slate-700 pl-3">Copy</span>
                 </div>
             </div>
-        </div>
-        <div class="scroll-indicator">
-            <span>Scroll Down</span>
-            <div class="scroll-arrow"></div>
-        </div>
-    </section>
+        </section>
 
-    <!-- About Section -->
-    <section id="about" class="about section">
-        <div class="container">
-            <h2 class="section-title" data-aos="fade-up">About Me</h2>
-            <div class="about-grid">
-                <div class="about-text" data-aos="fade-right">
-                    <p class="about-description">
-                        DevOps & Cloud Engineer with 2+ years of hands-on experience designing, automating, and managing scalable infrastructure across AWS and Azure environments. Specialized in CI/CD automation, Kubernetes orchestration, DevSecOps integration, and production-grade cloud deployments.
-                    </p>
-                    <p class="about-description">
-                        Currently working on AI-driven infrastructure supporting real-time voice-based applications, with hands-on exposure to containerized AI services, model deployment workflows, and cloud-native architecture patterns.
-                    </p>
-                    <p class="about-description">
-                        Experienced in infrastructure as code, monitoring and observability, performance optimization, and secure-by-design cloud systems aligned with 2026 DevOps standards.
-                    </p>
-                    <p class="about-description">
-                        Focused on reliability engineering, deployment automation, and platform scalability to ensure high system availability and operational efficiency.
-                    </p>
-                    <div class="about-info">
-                        <div class="info-item">
-                            <span class="info-label">Name:</span>
-                            <span class="info-value">Jigyasu Singh Chouhan</span>
+        <!-- About Section -->
+        <section id="about" class="py-20 relative">
+            <div class="absolute inset-0 bg-white/40 dark:bg-slate-900/60 backdrop-blur-3xl border-y border-white/50 z-0"></div>
+            <div class="max-w-7xl mx-auto px-6 md:px-8 relative z-10">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20">
+                    <div class="lg:col-span-7" data-aos="fade-right">
+                        <div class="flex items-center gap-3 mb-8">
+                            <div class="p-3 bg-violet-100 text-violet-600 rounded-xl"><i data-lucide="user"
+                                    class="w-6 h-6"></i></div>
+                            <h2 class="text-3xl md:text-4xl font-extrabold text-slate-900 dark:text-white tracking-tight">About Me</h2>
                         </div>
-                        <div class="info-item">
-                            <span class="info-label">Role:</span>
-                            <span class="info-value">DevOps Engineer</span>
-                        </div>
-                        <div class="info-item">
-                            <span class="info-label">Location:</span>
-                            <span class="info-value">Pune, India</span>
-                        </div>
-                        <div class="info-item">
-                            <span class="info-label">Experience:</span>
-                            <span class="info-value">2+ Years</span>
-                        </div>
+                        <ul class="space-y-5 text-slate-600 dark:text-slate-300 text-lg">
+                            <li class="flex items-start gap-4 p-3 rounded-xl hover:bg-white dark:hover:bg-slate-800/60 dark:hover:bg-slate-800/60 dark:bg-slate-900/60 transition-colors">
+                                <span class="text-violet-500 mt-1"><i data-lucide="check-circle-2"
+                                        class="w-5 h-5"></i></span>
+                                <span><strong class="text-slate-800">2.5+ years of experience</strong> in DevOps and
+                                    Platform Engineering.</span>
+                            </li>
+                            <li class="flex items-start gap-4 p-3 rounded-xl hover:bg-white dark:hover:bg-slate-800/60 dark:hover:bg-slate-800/60 dark:bg-slate-900/60 transition-colors">
+                                <span class="text-violet-500 mt-1"><i data-lucide="check-circle-2"
+                                        class="w-5 h-5"></i></span>
+                                <span>Worked extensively with AWS, Azure, Docker, CI/CD, observability, and AI/LLM
+                                    systems.</span>
+                            </li>
+                            <li class="flex items-start gap-4 p-3 rounded-xl hover:bg-white dark:hover:bg-slate-800/60 dark:hover:bg-slate-800/60 dark:bg-slate-900/60 transition-colors">
+                                <span class="text-violet-500 mt-1"><i data-lucide="check-circle-2"
+                                        class="w-5 h-5"></i></span>
+                                <span>Experience managing <strong class="text-slate-800">production deployments</strong>
+                                    and high-availability systems.</span>
+                            </li>
+                            <li class="flex items-start gap-4 p-3 rounded-xl hover:bg-white dark:hover:bg-slate-800/60 dark:hover:bg-slate-800/60 dark:bg-slate-900/60 transition-colors">
+                                <span class="text-violet-500 mt-1"><i data-lucide="check-circle-2"
+                                        class="w-5 h-5"></i></span>
+                                <span>Strong focus on automation, reliability, scalability, and cost
+                                    optimization.</span>
+                            </li>
+                            <li class="flex items-start gap-4 p-3 rounded-xl hover:bg-white dark:hover:bg-slate-800/60 dark:hover:bg-slate-800/60 dark:bg-slate-900/60 transition-colors">
+                                <span class="text-violet-500 mt-1"><i data-lucide="check-circle-2"
+                                        class="w-5 h-5"></i></span>
+                                <span>Built infrastructure for <strong class="text-slate-800">real-time AI inference
+                                        workloads</strong>.</span>
+                            </li>
+                        </ul>
                     </div>
-                </div>
-                <div class="about-skills" data-aos="fade-left">
-                    <h3 class="skills-heading">Technical Proficiency</h3>
-                    <div class="skill-bar">
-                        <div class="skill-info">
-                            <span>Docker & Kubernetes</span>
-                            <span>85%</span>
+                    <div class="lg:col-span-5 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-6"
+                        data-aos="fade-left">
+                        <div class="p-8 glass-card rounded-3xl group">
+                            <div class="flex items-center gap-3 mb-4">
+                                <i data-lucide="shield-alert" class="w-5 h-5 text-violet-600"></i>
+                                <h3 class="text-sm font-bold text-violet-600 uppercase tracking-widest">Production
+                                    Experience</h3>
+                            </div>
+                            <ul class="text-slate-600 dark:text-slate-300 space-y-3 font-medium">
+                                <li class="flex items-center gap-2 group-hover:translate-x-1 transition-transform"><i
+                                        data-lucide="chevron-right" class="w-4 h-4 text-violet-400"></i> Incident
+                                    handling & P1/P2 support</li>
+                                <li class="flex items-center gap-2 group-hover:translate-x-1 transition-transform"><i
+                                        data-lucide="chevron-right" class="w-4 h-4 text-violet-400"></i> High
+                                    availability & Auto-scaling</li>
+                                <li class="flex items-center gap-2 group-hover:translate-x-1 transition-transform"><i
+                                        data-lucide="chevron-right" class="w-4 h-4 text-violet-400"></i> Reliability
+                                    engineering</li>
+                                <li class="flex items-center gap-2 group-hover:translate-x-1 transition-transform"><i
+                                        data-lucide="chevron-right" class="w-4 h-4 text-violet-400"></i> Production
+                                    infrastructure ownership</li>
+                            </ul>
                         </div>
-                        <div class="skill-progress">
-                            <div class="skill-fill" data-width="85"></div>
-                        </div>
-                    </div>
-                    <div class="skill-bar">
-                        <div class="skill-info">
-                            <span>CI/CD (Jenkins, GitHub Actions)</span>
-                            <span>90%</span>
-                        </div>
-                        <div class="skill-progress">
-                            <div class="skill-fill" data-width="90"></div>
-                        </div>
-                    </div>
-                    <div class="skill-bar">
-                        <div class="skill-info">
-                            <span>AWS & Cloud Services</span>
-                            <span>85%</span>
-                        </div>
-                        <div class="skill-progress">
-                            <div class="skill-fill" data-width="85"></div>
-                        </div>
-                    </div>
-                    <div class="skill-bar">
-                        <div class="skill-info">
-                            <span>Monitoring (Grafana, Prometheus)</span>
-                            <span>80%</span>
-                        </div>
-                        <div class="skill-progress">
-                            <div class="skill-fill" data-width="80"></div>
-                        </div>
-                    </div>
-                    <div class="skill-bar">
-                        <div class="skill-info">
-                            <span>Infrastructure as Code (Terraform)</span>
-                            <span>75%</span>
-                        </div>
-                        <div class="skill-progress">
-                            <div class="skill-fill" data-width="75"></div>
-                        </div>
-                    </div>
-                    <div class="skill-bar">
-                        <div class="skill-info">
-                            <span>Python & Scripting</span>
-                            <span>70%</span>
-                        </div>
-                        <div class="skill-progress">
-                            <div class="skill-fill" data-width="70"></div>
+                        <div class="p-8 glass-card rounded-3xl group">
+                            <div class="flex items-center gap-3 mb-4">
+                                <i data-lucide="target" class="w-5 h-5 text-fuchsia-600"></i>
+                                <h3 class="text-sm font-bold text-fuchsia-600 uppercase tracking-widest">Current Focus
+                                </h3>
+                            </div>
+                            <ul class="text-slate-600 dark:text-slate-300 space-y-3 font-medium">
+                                <li class="flex items-center gap-2 group-hover:translate-x-1 transition-transform"><i
+                                        data-lucide="chevron-right" class="w-4 h-4 text-fuchsia-400"></i> AI
+                                    infrastructure & GPU optimization</li>
+                                <li class="flex items-center gap-2 group-hover:translate-x-1 transition-transform"><i
+                                        data-lucide="chevron-right" class="w-4 h-4 text-fuchsia-400"></i> Platform
+                                    engineering</li>
+                                <li class="flex items-center gap-2 group-hover:translate-x-1 transition-transform"><i
+                                        data-lucide="chevron-right" class="w-4 h-4 text-fuchsia-400"></i> DevSecOps
+                                    integration</li>
+                                <li class="flex items-center gap-2 group-hover:translate-x-1 transition-transform"><i
+                                        data-lucide="chevron-right" class="w-4 h-4 text-fuchsia-400"></i> Scalable
+                                    Distributed systems</li>
+                            </ul>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Skills Section -->
-    <section id="skills" class="skills section">
-        <div class="container">
-            <h2 class="section-title" data-aos="fade-up">Skills & Expertise</h2>
-            <p class="section-subtitle" data-aos="fade-up">Technologies I work with</p>
-            
-            <div class="skills-grid">
-                <!-- Cloud -->
-                <div class="skill-card" data-aos="zoom-in" data-aos-delay="100">
-                    <div class="skill-icon">☁️</div>
-                    <h3 class="skill-title">Cloud Platforms</h3>
-                    <ul class="skill-list">
-                        <li>AWS (EC2, S3, RDS, ALB, ELB, IAM, VPC)</li>
-                        <li>Route53, CloudWatch, DynamoDB, CloudFront</li>
-                        <li>Azure, Azure DevOps</li>
-                    </ul>
+        <!-- Tech Stack -->
+        <section id="stack" class="py-24">
+            <div class="max-w-7xl mx-auto px-6 md:px-8">
+                <div class="flex flex-col items-center mb-16" data-aos="fade-up">
+                    <div class="p-3 bg-fuchsia-100 text-fuchsia-600 rounded-2xl mb-4"><i data-lucide="layers"
+                            class="w-8 h-8"></i></div>
+                    <h2 class="text-4xl md:text-5xl font-extrabold text-slate-900 dark:text-white tracking-tight text-center">Technical
+                        Arsenal</h2>
                 </div>
 
-                <!-- Containers -->
-                <div class="skill-card" data-aos="zoom-in" data-aos-delay="200">
-                    <div class="skill-icon">🐳</div>
-                    <h3 class="skill-title">Containerization & Deployment</h3>
-                    <ul class="skill-list">
-                        <li>Docker, Kubernetes, Containerization</li>
-                        <li>Auto Scaling, ECS</li>
-                        <li>Apache Tomcat, NGINX</li>
-                    </ul>
-                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Cloud -->
+                    <div class="p-8 glass-card rounded-3xl group" data-aos="fade-up" data-aos-delay="100">
+                        <div class="flex items-center gap-4 mb-8">
+                            <div
+                                class="w-12 h-12 rounded-2xl bg-violet-100 flex items-center justify-center text-violet-600 icon-container">
+                                <i data-lucide="cloud" class="w-6 h-6"></i></div>
+                            <h3 class="font-bold text-slate-900 dark:text-white text-xl">Cloud</h3>
+                        </div>
+                        <div class="flex flex-wrap gap-2.5">
+                            <span class="skill-pill px-3 py-1.5 rounded-lg text-sm font-medium"><i data-lucide="server"
+                                    class="w-3.5 h-3.5 text-violet-500"></i> AWS</span>
+                            <span class="skill-pill px-3 py-1.5 rounded-lg text-sm font-medium"><i
+                                    data-lucide="cloud-snow" class="w-3.5 h-3.5 text-violet-500"></i> Azure</span>
+                            <span class="skill-pill px-3 py-1.5 rounded-lg text-sm font-medium"><i data-lucide="shield"
+                                    class="w-3.5 h-3.5 text-violet-500"></i> Cloudflare</span>
+                            <span class="skill-pill px-3 py-1.5 rounded-lg text-sm font-medium"><i data-lucide="network"
+                                    class="w-3.5 h-3.5 text-violet-500"></i> Route53</span>
+                            <span class="skill-pill px-3 py-1.5 rounded-lg text-sm font-medium"><i data-lucide="key"
+                                    class="w-3.5 h-3.5 text-violet-500"></i> IAM</span>
+                            <span class="skill-pill px-3 py-1.5 rounded-lg text-sm font-medium"><i
+                                    data-lucide="component" class="w-3.5 h-3.5 text-violet-500"></i> VPC</span>
+                        </div>
+                    </div>
 
-                <!-- CI/CD -->
-                <div class="skill-card" data-aos="zoom-in" data-aos-delay="300">
-                    <div class="skill-icon">🔄</div>
-                    <h3 class="skill-title">CI/CD & DevOps Tools</h3>
-                    <ul class="skill-list">
-                        <li>Jenkins, GitHub Actions, GitLab CI/CD</li>
-                        <li>Maven, Git, Bitbucket</li>
-                        <li>CI/CD Pipelines, Deployment Automation</li>
-                    </ul>
-                </div>
+                    <!-- DevOps -->
+                    <div class="p-8 glass-card rounded-3xl group" data-aos="fade-up" data-aos-delay="200">
+                        <div class="flex items-center gap-4 mb-8">
+                            <div
+                                class="w-12 h-12 rounded-2xl bg-fuchsia-100 flex items-center justify-center text-fuchsia-600 icon-container">
+                                <i data-lucide="settings" class="w-6 h-6"></i></div>
+                            <h3 class="font-bold text-slate-900 dark:text-white text-xl">DevOps & CI/CD</h3>
+                        </div>
+                        <div class="flex flex-wrap gap-2.5">
+                            <span class="skill-pill px-3 py-1.5 rounded-lg text-sm font-medium"><i data-lucide="box"
+                                    class="w-3.5 h-3.5 text-fuchsia-500"></i> Docker</span>
+                            <span class="skill-pill px-3 py-1.5 rounded-lg text-sm font-medium"><i
+                                    data-lucide="git-merge" class="w-3.5 h-3.5 text-fuchsia-500"></i> Jenkins</span>
+                            <span class="skill-pill px-3 py-1.5 rounded-lg text-sm font-medium"><i
+                                    data-lucide="play-circle" class="w-3.5 h-3.5 text-fuchsia-500"></i> Actions</span>
+                            <span class="skill-pill px-3 py-1.5 rounded-lg text-sm font-medium"><i data-lucide="gitlab"
+                                    class="w-3.5 h-3.5 text-fuchsia-500"></i> GitLab CI</span>
+                            <span class="skill-pill px-3 py-1.5 rounded-lg text-sm font-medium"><i data-lucide="search"
+                                    class="w-3.5 h-3.5 text-fuchsia-500"></i> SonarQube</span>
+                            <span class="skill-pill px-3 py-1.5 rounded-lg text-sm font-medium"><i
+                                    data-lucide="server-cog" class="w-3.5 h-3.5 text-fuchsia-500"></i> NGINX</span>
+                        </div>
+                    </div>
 
-                <!-- Monitoring -->
-                <div class="skill-card" data-aos="zoom-in" data-aos-delay="400">
-                    <div class="skill-icon">📊</div>
-                    <h3 class="skill-title">Monitoring & Logging</h3>
-                    <ul class="skill-list">
-                        <li>Grafana, Prometheus</li>
-                        <li>New Relic, AWS CloudWatch</li>
-                        <li>System Monitoring, Troubleshooting</li>
-                    </ul>
-                </div>
+                    <!-- Monitoring -->
+                    <div class="p-8 glass-card rounded-3xl group" data-aos="fade-up" data-aos-delay="300">
+                        <div class="flex items-center gap-4 mb-8">
+                            <div
+                                class="w-12 h-12 rounded-2xl bg-blue-100 flex items-center justify-center text-blue-600 icon-container">
+                                <i data-lucide="activity" class="w-6 h-6"></i></div>
+                            <h3 class="font-bold text-slate-900 dark:text-white text-xl">Monitoring</h3>
+                        </div>
+                        <div class="flex flex-wrap gap-2.5">
+                            <span class="skill-pill px-3 py-1.5 rounded-lg text-sm font-medium"><i
+                                    data-lucide="pie-chart" class="w-3.5 h-3.5 text-blue-500"></i> Grafana</span>
+                            <span class="skill-pill px-3 py-1.5 rounded-lg text-sm font-medium"><i
+                                    data-lucide="bar-chart-2" class="w-3.5 h-3.5 text-blue-500"></i> Prometheus</span>
+                            <span class="skill-pill px-3 py-1.5 rounded-lg text-sm font-medium"><i data-lucide="eye"
+                                    class="w-3.5 h-3.5 text-blue-500"></i> CloudWatch</span>
+                            <span class="skill-pill px-3 py-1.5 rounded-lg text-sm font-medium"><i
+                                    data-lucide="trending-up" class="w-3.5 h-3.5 text-blue-500"></i> New Relic</span>
+                        </div>
+                    </div>
 
-                <!-- Security -->
-                <div class="skill-card" data-aos="zoom-in" data-aos-delay="500">
-                    <div class="skill-icon">🔒</div>
-                    <h3 class="skill-title">Security & Quality</h3>
-                    <ul class="skill-list">
-                        <li>SonarQube, DevSecOps</li>
-                        <li>SSL, Domain Management, Cloudflare</li>
-                        <li>Security Best Practices</li>
-                    </ul>
-                </div>
+                    <!-- AI Infrastructure -->
+                    <div class="p-8 glass-card rounded-3xl group" data-aos="fade-up" data-aos-delay="400">
+                        <div class="flex items-center gap-4 mb-8">
+                            <div
+                                class="w-12 h-12 rounded-2xl bg-emerald-100 flex items-center justify-center text-emerald-600 icon-container">
+                                <i data-lucide="cpu" class="w-6 h-6"></i></div>
+                            <h3 class="font-bold text-slate-900 dark:text-white text-xl">AI Infrastructure</h3>
+                        </div>
+                        <div class="flex flex-wrap gap-2.5">
+                            <span class="skill-pill px-3 py-1.5 rounded-lg text-sm font-medium"><i data-lucide="server"
+                                    class="w-3.5 h-3.5 text-emerald-500"></i> GPU Infra</span>
+                            <span class="skill-pill px-3 py-1.5 rounded-lg text-sm font-medium"><i data-lucide="bot"
+                                    class="w-3.5 h-3.5 text-emerald-500"></i> LLM Deploy</span>
+                            <span class="skill-pill px-3 py-1.5 rounded-lg text-sm font-medium"><i data-lucide="zap"
+                                    class="w-3.5 h-3.5 text-emerald-500"></i> Inference Opt.</span>
+                        </div>
+                    </div>
 
-                <!-- IaC -->
-                <div class="skill-card" data-aos="zoom-in" data-aos-delay="600">
-                    <div class="skill-icon">⚙️</div>
-                    <h3 class="skill-title">Languages & Scripting</h3>
-                    <ul class="skill-list">
-                        <li>Python, Shell Scripting, Bash</li>
-                        <li>SQL, Linux (AML)</li>
-                        <li>Configuration Management</li>
-                    </ul>
+                    <!-- Architecture -->
+                    <div class="p-8 glass-card rounded-3xl group" data-aos="fade-up" data-aos-delay="500">
+                        <div class="flex items-center gap-4 mb-8">
+                            <div
+                                class="w-12 h-12 rounded-2xl bg-rose-100 flex items-center justify-center text-rose-600 icon-container">
+                                <i data-lucide="workflow" class="w-6 h-6"></i></div>
+                            <h3 class="font-bold text-slate-900 dark:text-white text-xl">Architecture</h3>
+                        </div>
+                        <div class="flex flex-wrap gap-2.5">
+                            <span class="skill-pill px-3 py-1.5 rounded-lg text-sm font-medium"><i data-lucide="blocks"
+                                    class="w-3.5 h-3.5 text-rose-500"></i> Microservices</span>
+                            <span class="skill-pill px-3 py-1.5 rounded-lg text-sm font-medium"><i data-lucide="share-2"
+                                    class="w-3.5 h-3.5 text-rose-500"></i> Distributed</span>
+                            <span class="skill-pill px-3 py-1.5 rounded-lg text-sm font-medium"><i
+                                    data-lucide="arrow-up-circle" class="w-3.5 h-3.5 text-rose-500"></i> High
+                                Avail.</span>
+                            <span class="skill-pill px-3 py-1.5 rounded-lg text-sm font-medium"><i data-lucide="radio"
+                                    class="w-3.5 h-3.5 text-rose-500"></i> Event-Driven</span>
+                            <span class="skill-pill px-3 py-1.5 rounded-lg text-sm font-medium"><i
+                                    data-lucide="shield-check" class="w-3.5 h-3.5 text-rose-500"></i> SRE</span>
+                        </div>
+                    </div>
+
+                    <!-- Programming -->
+                    <div class="p-8 glass-card rounded-3xl group" data-aos="fade-up" data-aos-delay="600">
+                        <div class="flex items-center gap-4 mb-8">
+                            <div
+                                class="w-12 h-12 rounded-2xl bg-amber-100 flex items-center justify-center text-amber-600 icon-container">
+                                <i data-lucide="terminal" class="w-6 h-6"></i></div>
+                            <h3 class="font-bold text-slate-900 dark:text-white text-xl">Programming</h3>
+                        </div>
+                        <div class="flex flex-wrap gap-2.5">
+                            <span class="skill-pill px-3 py-1.5 rounded-lg text-sm font-medium"><i data-lucide="code-2"
+                                    class="w-3.5 h-3.5 text-amber-500"></i> Python</span>
+                            <span class="skill-pill px-3 py-1.5 rounded-lg text-sm font-medium"><i
+                                    data-lucide="terminal-square" class="w-3.5 h-3.5 text-amber-500"></i> Bash</span>
+                            <span class="skill-pill px-3 py-1.5 rounded-lg text-sm font-medium"><i
+                                    data-lucide="database" class="w-3.5 h-3.5 text-amber-500"></i> SQL</span>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- AI & Intelligent Systems Infrastructure Section -->
-    <section id="ai-infrastructure" class="skills section">
-        <div class="container">
-            <h2 class="section-title" data-aos="fade-up">AI & Intelligent Systems Infrastructure</h2>
-            <div class="skills-grid">
-                <div class="skill-card" data-aos="zoom-in" data-aos-delay="100">
-                    <div class="skill-icon">🤖</div>
-                    <h3 class="skill-title">AI Workload Management</h3>
-                    <ul class="skill-list">
-                        <li>Containerized AI workloads using Docker and Kubernetes</li>
-                        <li>CI/CD pipelines supporting model deployment workflows</li>
-                        <li>Infrastructure support for real-time AI applications</li>
-                    </ul>
+        <!-- Metrics & Achievements -->
+        <section class="py-24 relative">
+            <div class="absolute inset-0 bg-white/40 dark:bg-slate-900/60 backdrop-blur-3xl border-y border-white/50 z-0"></div>
+            <div class="max-w-7xl mx-auto px-6 md:px-8 relative z-10">
+                <div class="text-center mb-16" data-aos="fade-up">
+                    <div class="inline-block p-3 bg-emerald-100 text-emerald-600 rounded-2xl mb-4"><i
+                            data-lucide="award" class="w-8 h-8"></i></div>
+                    <h2 class="text-4xl md:text-5xl font-extrabold text-slate-900 dark:text-white mb-6 tracking-tight">Impact &
+                        Achievements</h2>
+                    <p class="text-lg text-slate-600 dark:text-slate-300">Demonstrating value through reliability and automation.</p>
                 </div>
-                <div class="skill-card" data-aos="zoom-in" data-aos-delay="200">
-                    <div class="skill-icon">🧠</div>
-                    <h3 class="skill-title">Intelligent Systems</h3>
-                    <ul class="skill-list">
-                        <li>Exposure to LLM deployment patterns using cloud-based inference APIs</li>
-                        <li>Monitoring GPU/CPU-intensive workloads</li>
-                        <li>Scaling event-driven AI microservices</li>
-                    </ul>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+                    <div class="p-8 metric-card relative overflow-hidden group text-center" data-aos="fade-up"
+                        data-aos-delay="100">
+                        <div
+                            class="absolute top-0 right-0 w-24 h-24 bg-violet-50 rounded-full blur-2xl -mr-10 -mt-10 group-hover:bg-violet-100 transition-colors">
+                        </div>
+                        <i data-lucide="timer"
+                            class="w-8 h-8 text-violet-400 mx-auto mb-4 group-hover:scale-110 transition-transform"></i>
+                        <span class="block text-4xl font-extrabold text-violet-600 mb-2 relative z-10">50%</span>
+                        <span class="text-xs font-bold text-slate-500 dark:text-slate-400 uppercase tracking-widest relative z-10">Deploy
+                            Time Reduced</span>
+                    </div>
+                    <div class="p-8 metric-card relative overflow-hidden group text-center" data-aos="fade-up"
+                        data-aos-delay="200">
+                        <div
+                            class="absolute top-0 right-0 w-24 h-24 bg-fuchsia-50 rounded-full blur-2xl -mr-10 -mt-10 group-hover:bg-fuchsia-100 transition-colors">
+                        </div>
+                        <i data-lucide="layers"
+                            class="w-8 h-8 text-fuchsia-400 mx-auto mb-4 group-hover:scale-110 transition-transform"></i>
+                        <span class="block text-4xl font-extrabold text-fuchsia-500 mb-2 relative z-10">10+</span>
+                        <span class="text-xs font-bold text-slate-500 dark:text-slate-400 uppercase tracking-widest relative z-10">Prod
+                            Stacks Managed</span>
+                    </div>
+                    <div class="p-8 metric-card relative overflow-hidden group text-center" data-aos="fade-up"
+                        data-aos-delay="300">
+                        <div
+                            class="absolute top-0 right-0 w-24 h-24 bg-violet-50 rounded-full blur-2xl -mr-10 -mt-10 group-hover:bg-violet-100 transition-colors">
+                        </div>
+                        <i data-lucide="zap"
+                            class="w-8 h-8 text-violet-400 mx-auto mb-4 group-hover:scale-110 transition-transform"></i>
+                        <span class="block text-4xl font-extrabold text-violet-600 mb-2 relative z-10">100%</span>
+                        <span
+                            class="text-xs font-bold text-slate-500 dark:text-slate-400 uppercase tracking-widest relative z-10">Infrastructure
+                            Auto</span>
+                    </div>
+                    <div class="p-8 metric-card relative overflow-hidden group text-center" data-aos="fade-up"
+                        data-aos-delay="400">
+                        <div
+                            class="absolute top-0 right-0 w-24 h-24 bg-fuchsia-50 rounded-full blur-2xl -mr-10 -mt-10 group-hover:bg-fuchsia-100 transition-colors">
+                        </div>
+                        <i data-lucide="shield-check"
+                            class="w-8 h-8 text-fuchsia-400 mx-auto mb-4 group-hover:scale-110 transition-transform"></i>
+                        <span class="block text-4xl font-extrabold text-fuchsia-500 mb-2 relative z-10">24/7</span>
+                        <span class="text-xs font-bold text-slate-500 dark:text-slate-400 uppercase tracking-widest relative z-10">System
+                            Reliability</span>
+                    </div>
                 </div>
-                <div class="skill-card" data-aos="zoom-in" data-aos-delay="300">
-                    <div class="skill-icon">⚡</div>
-                    <h3 class="skill-title">Cloud-Native AI</h3>
-                    <ul class="skill-list">
-                        <li>Exploring Agentic AI orchestration architectures</li>
-                        <li>Cloud-native automation for intelligent systems</li>
-                    </ul>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6" data-aos="fade-up">
+                    <div
+                        class="p-6 glass-card rounded-2xl flex items-center gap-5 hover:bg-white dark:hover:bg-slate-800 transition-colors group">
+                        <div
+                            class="w-14 h-14 rounded-full bg-emerald-100 flex items-center justify-center text-emerald-600 flex-shrink-0 group-hover:scale-110 transition-transform">
+                            <i data-lucide="cpu" class="w-6 h-6"></i></div>
+                        <p class="font-medium text-slate-700 dark:text-slate-200">Supported highly-available AI/LLM workloads on scalable
+                            GPU infrastructure.</p>
+                    </div>
+                    <div
+                        class="p-6 glass-card rounded-2xl flex items-center gap-5 hover:bg-white dark:hover:bg-slate-800 transition-colors group">
+                        <div
+                            class="w-14 h-14 rounded-full bg-emerald-100 flex items-center justify-center text-emerald-600 flex-shrink-0 group-hover:scale-110 transition-transform">
+                            <i data-lucide="git-merge" class="w-6 h-6"></i></div>
+                        <p class="font-medium text-slate-700 dark:text-slate-200">Built scalable CI/CD systems with automated rollbacks and
+                            validation.</p>
+                    </div>
+                    <div
+                        class="p-6 glass-card rounded-2xl flex items-center gap-5 hover:bg-white dark:hover:bg-slate-800 transition-colors group">
+                        <div
+                            class="w-14 h-14 rounded-full bg-emerald-100 flex items-center justify-center text-emerald-600 flex-shrink-0 group-hover:scale-110 transition-transform">
+                            <i data-lucide="activity" class="w-6 h-6"></i></div>
+                        <p class="font-medium text-slate-700 dark:text-slate-200">Improved monitoring and drastically reduced incident
+                            response times.</p>
+                    </div>
+                    <div
+                        class="p-6 glass-card rounded-2xl flex items-center gap-5 hover:bg-white dark:hover:bg-slate-800 transition-colors group">
+                        <div
+                            class="w-14 h-14 rounded-full bg-emerald-100 flex items-center justify-center text-emerald-600 flex-shrink-0 group-hover:scale-110 transition-transform">
+                            <i data-lucide="settings" class="w-6 h-6"></i></div>
+                        <p class="font-medium text-slate-700 dark:text-slate-200">Fully automated infrastructure operations eliminating
+                            manual toil.</p>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Platform & Automation Engineering Section -->
-    <section id="platform-engineering" class="skills section">
-        <div class="container">
-            <h2 class="section-title" data-aos="fade-up">Platform & Automation Engineering</h2>
-            <div class="skills-grid">
-                <div class="skill-card" data-aos="zoom-in" data-aos-delay="100">
-                    <div class="skill-icon">🔧</div>
-                    <h3 class="skill-title">GitOps & IaC</h3>
-                    <ul class="skill-list">
-                        <li>GitOps workflows (ArgoCD-based deployments)</li>
-                        <li>Infrastructure as Code using Terraform</li>
-                        <li>Automated environment provisioning</li>
-                    </ul>
+        <!-- Featured Projects -->
+        <section id="projects" class="py-24">
+            <div class="max-w-7xl mx-auto px-6 md:px-8">
+                <div class="flex flex-col items-center mb-16" data-aos="fade-up">
+                    <div class="p-3 bg-violet-100 text-violet-600 rounded-2xl mb-4"><i data-lucide="folder-code"
+                            class="w-8 h-8"></i></div>
+                    <h2 class="text-4xl md:text-5xl font-extrabold text-slate-900 dark:text-white tracking-tight text-center">Featured
+                        Initiatives</h2>
                 </div>
-                <div class="skill-card" data-aos="zoom-in" data-aos-delay="200">
-                    <div class="skill-icon">🔐</div>
-                    <h3 class="skill-title">Security & Governance</h3>
-                    <ul class="skill-list">
-                        <li>CI/CD template standardization</li>
-                        <li>Secure pipeline design</li>
-                        <li>Secrets management and IAM governance</li>
-                    </ul>
-                </div>
-                <div class="skill-card" data-aos="zoom-in" data-aos-delay="300">
-                    <div class="skill-icon">🏗️</div>
-                    <h3 class="skill-title">Cloud Architecture</h3>
-                    <ul class="skill-list">
-                        <li>High-availability cloud architecture design</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- Projects Section -->
-    <section id="projects" class="projects section">
-        <div class="container">
-            <h2 class="section-title" data-aos="fade-up">Featured Projects</h2>
-            <p class="section-subtitle" data-aos="fade-up">Real-world DevOps implementations</p>
-            
-            <!-- Project Filters -->
-            <div class="project-filters" data-aos="fade-up">
-                <button class="filter-btn active" data-filter="all">All</button>
-                <button class="filter-btn" data-filter="devops">DevOps</button>
-                <button class="filter-btn" data-filter="infrastructure">Infrastructure</button>
-                <button class="filter-btn" data-filter="automation">Automation</button>
-            </div>
-
-            <!-- Projects Grid -->
-            <div class="projects-grid">
-                <!-- Project 1 -->
-                <div class="project-card" data-category="devops automation" data-aos="fade-up">
-                    <div class="project-image">
-                        <div class="project-overlay">
-                            <div class="project-links">
-                                <a href="https://github.com/Jigyasusinghchouhan" target="_blank" class="project-link">
-                                    <span>GitHub</span>
-                                </a>
+                <div class="space-y-16">
+                    <!-- Project 1 -->
+                    <div class="p-8 md:p-12 glass-card rounded-[3rem] relative overflow-hidden group"
+                        data-aos="fade-up">
+                        <div
+                            class="absolute top-0 right-0 w-[500px] h-[500px] bg-gradient-to-br from-violet-200/30 to-fuchsia-200/30 rounded-full blur-3xl -mr-20 -mt-20 group-hover:scale-110 transition-all duration-700 pointer-events-none">
+                        </div>
+                        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 relative z-10">
+                            <div>
+                                <span
+                                    class="inline-flex items-center gap-2 px-3 py-1.5 bg-violet-100 text-violet-700 rounded-lg text-xs font-bold uppercase tracking-widest mb-6">
+                                    <i data-lucide="star" class="w-3.5 h-3.5"></i> Co-founder & Infra Lead
+                                </span>
+                                <h3 class="text-3xl md:text-4xl font-extrabold text-slate-900 dark:text-white mb-6 tracking-tight">
+                                    BreezeStay SaaS</h3>
+                                <div class="space-y-4 mb-8 text-slate-600 dark:text-slate-300">
+                                    <p class="flex gap-3"><i data-lucide="alert-circle"
+                                            class="w-5 h-5 text-violet-400 flex-shrink-0 mt-0.5"></i> <span><strong
+                                                class="text-slate-900">Problem:</strong> Needed a highly scalable,
+                                            zero-downtime infrastructure for a multi-user rental platform.</span></p>
+                                    <p class="flex gap-3"><i data-lucide="workflow"
+                                            class="w-5 h-5 text-violet-400 flex-shrink-0 mt-0.5"></i> <span><strong
+                                                class="text-slate-900">Architecture:</strong> AWS EKS, RDS, CloudFront,
+                                            Route53, distributed microservices.</span></p>
+                                    <p class="flex gap-3"><i data-lucide="key"
+                                            class="w-5 h-5 text-violet-400 flex-shrink-0 mt-0.5"></i> <span><strong
+                                                class="text-slate-900">Key Features:</strong> CI/CD automation, active
+                                            monitoring, automated domain + SSL management.</span></p>
+                                    <p class="flex gap-3"><i data-lucide="trending-up"
+                                            class="w-5 h-5 text-violet-400 flex-shrink-0 mt-0.5"></i> <span><strong
+                                                class="text-slate-900">Impact:</strong> Delivering robust production
+                                            infrastructure for active users with 99.9% uptime.</span></p>
+                                </div>
+                                <div class="flex flex-wrap gap-2 mb-8">
+                                    <span
+                                        class="px-3 py-1 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-lg text-xs font-bold text-violet-600 flex items-center gap-1"><i
+                                            data-lucide="server" class="w-3 h-3"></i> AWS EKS</span>
+                                    <span
+                                        class="px-3 py-1 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-lg text-xs font-bold text-violet-600 flex items-center gap-1"><i
+                                            data-lucide="code" class="w-3 h-3"></i> TERRAFORM</span>
+                                    <span
+                                        class="px-3 py-1 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-lg text-xs font-bold text-violet-600 flex items-center gap-1"><i
+                                            data-lucide="box" class="w-3 h-3"></i> DOCKER</span>
+                                </div>
+                                <div class="flex gap-4">
+                                    <a href="https://breezestay.in/" target="_blank"
+                                        class="connect-btn text-white px-6 py-3 rounded-full text-sm font-bold flex items-center gap-2 group/btn">
+                                        Visit Live Site <i data-lucide="external-link"
+                                            class="w-4 h-4 group-hover/btn:-translate-y-0.5 group-hover/btn:translate-x-0.5 transition-transform"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <div
+                                class="diagram-placeholder rounded-2xl flex flex-col items-center justify-center p-8 text-center min-h-[300px] relative overflow-hidden group/diag">
+                                <i data-lucide="image"
+                                    class="w-16 h-16 text-slate-400 mb-4 group-hover/diag:scale-110 transition-transform"></i>
+                                <span class="text-slate-500 dark:text-slate-400 font-bold">System Design / Architecture</span>
+                                <span class="text-slate-400 text-sm mt-2">Replace with actual BreezeStay AWS
+                                    architecture image</span>
                             </div>
                         </div>
                     </div>
-                    <div class="project-content">
-                        <h3 class="project-title">Streamlined Django Deployment on AWS</h3>
-                        <p class="project-description">
-                            Deployed Django application using 3-tier AWS architecture (EC2). Automated with Jenkins, Docker, SonarQube. Reduced deployment time by 50%.
-                        </p>
-                        <div class="project-tags">
-                            <span class="tag">Django</span>
-                            <span class="tag">AWS EC2</span>
-                            <span class="tag">Jenkins</span>
-                            <span class="tag">Docker</span>
-                            <span class="tag">SonarQube</span>
-                        </div>
-                    </div>
-                </div>
 
-                <!-- Project 2 -->
-                <div class="project-card" data-category="automation devops" data-aos="fade-up" data-aos-delay="100">
-                    <div class="project-image">
-                        <div class="project-overlay">
-                            <div class="project-links">
-                                <a href="https://github.com/Jigyasusinghchouhan/Timetable-Generation-System" target="_blank" class="project-link">
-                                    <span>GitHub</span>
-                                </a>
+                    <!-- Project 2 -->
+                    <div class="p-8 md:p-12 glass-card rounded-[3rem] relative overflow-hidden group"
+                        data-aos="fade-up">
+                        <div
+                            class="absolute top-0 right-0 w-[500px] h-[500px] bg-gradient-to-br from-blue-200/30 to-emerald-200/30 rounded-full blur-3xl -mr-20 -mt-20 group-hover:scale-110 transition-all duration-700 pointer-events-none">
+                        </div>
+                        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 relative z-10">
+                            <div
+                                class="order-2 lg:order-1 diagram-placeholder rounded-2xl flex flex-col items-center justify-center p-8 text-center min-h-[300px] group/diag">
+                                <i data-lucide="network"
+                                    class="w-16 h-16 text-slate-400 mb-4 group-hover/diag:scale-110 transition-transform"></i>
+                                <span class="text-slate-500 dark:text-slate-400 font-bold">AI Inference Architecture</span>
+                                <span class="text-slate-400 text-sm mt-2">Replace with LLM deployment workflow</span>
+                            </div>
+                            <div class="order-1 lg:order-2">
+                                <span
+                                    class="inline-flex items-center gap-2 px-3 py-1.5 bg-blue-100 text-blue-700 rounded-lg text-xs font-bold uppercase tracking-widest mb-6">
+                                    <i data-lucide="cpu" class="w-3.5 h-3.5"></i> Production AI Systems
+                                </span>
+                                <h3 class="text-3xl md:text-4xl font-extrabold text-slate-900 dark:text-white mb-6 tracking-tight">AI
+                                    Infrastructure & LLM Platform</h3>
+                                <div class="space-y-4 mb-8 text-slate-600 dark:text-slate-300">
+                                    <p class="flex gap-3"><i data-lucide="alert-circle"
+                                            class="w-5 h-5 text-blue-400 flex-shrink-0 mt-0.5"></i> <span><strong
+                                                class="text-slate-900">Problem:</strong> LLM deployments were
+                                            inefficient, causing high latency and inflated GPU costs.</span></p>
+                                    <p class="flex gap-3"><i data-lucide="workflow"
+                                            class="w-5 h-5 text-blue-400 flex-shrink-0 mt-0.5"></i> <span><strong
+                                                class="text-slate-900">Architecture:</strong> Dockerized AI deployments,
+                                            Kubernetes orchestration, Load balanced nodes.</span></p>
+                                    <p class="flex gap-3"><i data-lucide="key"
+                                            class="w-5 h-5 text-blue-400 flex-shrink-0 mt-0.5"></i> <span><strong
+                                                class="text-slate-900">Key Features:</strong> GPU-based inference
+                                            systems, real-time pipelines, monitoring utilization.</span></p>
+                                    <p class="flex gap-3"><i data-lucide="trending-up"
+                                            class="w-5 h-5 text-blue-400 flex-shrink-0 mt-0.5"></i> <span><strong
+                                                class="text-slate-900">Impact:</strong> Massively optimized AI
+                                            workloads, reducing latency and cutting cloud costs.</span></p>
+                                </div>
+                                <div class="flex flex-wrap gap-2 mb-8">
+                                    <span
+                                        class="px-3 py-1 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-lg text-xs font-bold text-blue-600 flex items-center gap-1"><i
+                                            data-lucide="zap" class="w-3 h-3"></i> vLLM</span>
+                                    <span
+                                        class="px-3 py-1 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-lg text-xs font-bold text-blue-600 flex items-center gap-1"><i
+                                            data-lucide="server" class="w-3 h-3"></i> GPU INFRA</span>
+                                    <span
+                                        class="px-3 py-1 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-lg text-xs font-bold text-blue-600 flex items-center gap-1"><i
+                                            data-lucide="layers" class="w-3 h-3"></i> KUBERNETES</span>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div class="project-content">
-                        <h3 class="project-title">Timetable Generation System (TTGS)</h3>
-                        <p class="project-description">
-                            Academic scheduling automation system built using Python, MySQL, Docker. Reduced manual workload and improved scheduling efficiency.
-                        </p>
-                        <div class="project-tags">
-                            <span class="tag">Python</span>
-                            <span class="tag">MySQL</span>
-                            <span class="tag">Docker</span>
-                            <span class="tag">Automation</span>
+
+                    <!-- Project 3 -->
+                    <div class="p-8 md:p-12 glass-card rounded-[3rem] relative overflow-hidden group"
+                        data-aos="fade-up">
+                        <div
+                            class="absolute top-0 right-0 w-[500px] h-[500px] bg-gradient-to-br from-fuchsia-200/30 to-rose-200/30 rounded-full blur-3xl -mr-20 -mt-20 group-hover:scale-110 transition-all duration-700 pointer-events-none">
+                        </div>
+                        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 relative z-10">
+                            <div>
+                                <span
+                                    class="inline-flex items-center gap-2 px-3 py-1.5 bg-fuchsia-100 text-fuchsia-700 rounded-lg text-xs font-bold uppercase tracking-widest mb-6">
+                                    <i data-lucide="eye" class="w-3.5 h-3.5"></i> Internal SRE Tooling
+                                </span>
+                                <h3 class="text-3xl md:text-4xl font-extrabold text-slate-900 dark:text-white mb-6 tracking-tight">
+                                    Observability Platform</h3>
+                                <div class="space-y-4 mb-8 text-slate-600 dark:text-slate-300">
+                                    <p class="flex gap-3"><i data-lucide="alert-circle"
+                                            class="w-5 h-5 text-fuchsia-400 flex-shrink-0 mt-0.5"></i> <span><strong
+                                                class="text-slate-900">Problem:</strong> Lack of centralized visibility
+                                            into distributed cloud resources and server lifecycles.</span></p>
+                                    <p class="flex gap-3"><i data-lucide="workflow"
+                                            class="w-5 h-5 text-fuchsia-400 flex-shrink-0 mt-0.5"></i> <span><strong
+                                                class="text-slate-900">Architecture:</strong> Prometheus scraping
+                                            endpoints, Grafana dashboarding, CloudWatch integration.</span></p>
+                                    <p class="flex gap-3"><i data-lucide="key"
+                                            class="w-5 h-5 text-fuchsia-400 flex-shrink-0 mt-0.5"></i> <span><strong
+                                                class="text-slate-900">Key Features:</strong> Real-time monitoring,
+                                            intelligent alerting, automated lifecycle management.</span></p>
+                                    <p class="flex gap-3"><i data-lucide="trending-up"
+                                            class="w-5 h-5 text-fuchsia-400 flex-shrink-0 mt-0.5"></i> <span><strong
+                                                class="text-slate-900">Impact:</strong> Prevented outages through
+                                            proactive alerts and provided single-pane-of-glass metrics.</span></p>
+                                </div>
+                                <div class="flex flex-wrap gap-2 mb-8">
+                                    <span
+                                        class="px-3 py-1 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-lg text-xs font-bold text-fuchsia-600 flex items-center gap-1"><i
+                                            data-lucide="pie-chart" class="w-3 h-3"></i> GRAFANA</span>
+                                    <span
+                                        class="px-3 py-1 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-lg text-xs font-bold text-fuchsia-600 flex items-center gap-1"><i
+                                            data-lucide="bar-chart-2" class="w-3 h-3"></i> PROMETHEUS</span>
+                                    <span
+                                        class="px-3 py-1 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-lg text-xs font-bold text-fuchsia-600 flex items-center gap-1"><i
+                                            data-lucide="code-2" class="w-3 h-3"></i> PYTHON</span>
+                                </div>
+                            </div>
+                            <div
+                                class="diagram-placeholder rounded-2xl flex flex-col items-center justify-center p-8 text-center min-h-[300px] group/diag">
+                                <i data-lucide="activity"
+                                    class="w-16 h-16 text-slate-400 mb-4 group-hover/diag:scale-110 transition-transform"></i>
+                                <span class="text-slate-500 dark:text-slate-400 font-bold">Monitoring Stack Dashboard</span>
+                                <span class="text-slate-400 text-sm mt-2">Replace with Grafana metrics screenshot</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 4 -->
+                    <div class="p-8 md:p-12 glass-card rounded-[3rem] relative overflow-hidden group"
+                        data-aos="fade-up">
+                        <div
+                            class="absolute top-0 right-0 w-[500px] h-[500px] bg-gradient-to-br from-amber-200/30 to-orange-200/30 rounded-full blur-3xl -mr-20 -mt-20 group-hover:scale-110 transition-all duration-700 pointer-events-none">
+                        </div>
+                        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 relative z-10">
+                            <div
+                                class="order-2 lg:order-1 diagram-placeholder rounded-2xl flex flex-col items-center justify-center p-8 text-center min-h-[300px] group/diag">
+                                <i data-lucide="git-merge"
+                                    class="w-16 h-16 text-slate-400 mb-4 group-hover/diag:scale-110 transition-transform"></i>
+                                <span class="text-slate-500 dark:text-slate-400 font-bold">CI/CD Pipeline Flow</span>
+                                <span class="text-slate-400 text-sm mt-2">Replace with Jenkins/GitLab pipeline
+                                    diagram</span>
+                            </div>
+                            <div class="order-1 lg:order-2">
+                                <span
+                                    class="inline-flex items-center gap-2 px-3 py-1.5 bg-amber-100 text-amber-700 rounded-lg text-xs font-bold uppercase tracking-widest mb-6">
+                                    <i data-lucide="settings-2" class="w-3.5 h-3.5"></i> Automation Engineering
+                                </span>
+                                <h3 class="text-3xl md:text-4xl font-extrabold text-slate-900 dark:text-white mb-6 tracking-tight">CI/CD
+                                    Automation Platform</h3>
+                                <div class="space-y-4 mb-8 text-slate-600 dark:text-slate-300">
+                                    <p class="flex gap-3"><i data-lucide="alert-circle"
+                                            class="w-5 h-5 text-amber-400 flex-shrink-0 mt-0.5"></i> <span><strong
+                                                class="text-slate-900">Problem:</strong> Manual, error-prone deployment
+                                            processes across multiple development teams.</span></p>
+                                    <p class="flex gap-3"><i data-lucide="workflow"
+                                            class="w-5 h-5 text-amber-400 flex-shrink-0 mt-0.5"></i> <span><strong
+                                                class="text-slate-900">Architecture:</strong> Multi-stage pipelines,
+                                            automated testing gates, seamless artifact promotion.</span></p>
+                                    <p class="flex gap-3"><i data-lucide="key"
+                                            class="w-5 h-5 text-amber-400 flex-shrink-0 mt-0.5"></i> <span><strong
+                                                class="text-slate-900">Key Features:</strong> Jenkins / GitLab CI/CD,
+                                            SonarQube integration, rollback workflows.</span></p>
+                                    <p class="flex gap-3"><i data-lucide="trending-up"
+                                            class="w-5 h-5 text-amber-400 flex-shrink-0 mt-0.5"></i> <span><strong
+                                                class="text-slate-900">Impact:</strong> Achieved 100% automated
+                                            deployments, entirely eliminating human error in releases.</span></p>
+                                </div>
+                                <div class="flex flex-wrap gap-2 mb-8">
+                                    <span
+                                        class="px-3 py-1 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-lg text-xs font-bold text-amber-600 flex items-center gap-1"><i
+                                            data-lucide="git-commit" class="w-3 h-3"></i> JENKINS</span>
+                                    <span
+                                        class="px-3 py-1 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-lg text-xs font-bold text-amber-600 flex items-center gap-1"><i
+                                            data-lucide="gitlab" class="w-3 h-3"></i> GITLAB CI</span>
+                                    <span
+                                        class="px-3 py-1 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-lg text-xs font-bold text-amber-600 flex items-center gap-1"><i
+                                            data-lucide="search" class="w-3 h-3"></i> SONARQUBE</span>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
+        </section>
 
-            <div class="more-projects" data-aos="fade-up">
-                <a href="https://github.com/Jigyasusinghchouhan" target="_blank" class="btn btn-primary">View More on GitHub</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Experience Section -->
-    <section id="experience" class="experience section">
-        <div class="container">
-            <h2 class="section-title" data-aos="fade-up">Professional Experience</h2>
-            <p class="section-subtitle" data-aos="fade-up">My career journey</p>
-            
-            <div class="timeline">
-                <!-- Experience 1 - Rootle AI -->
-                <div class="timeline-item" data-aos="fade-up">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <div class="timeline-date">Nov 2025 – Present</div>
-                        <h3 class="timeline-title">DevOps Engineer</h3>
-                        <div class="timeline-company">Rootle AI</div>
-                        <ul class="timeline-description">
-                            <li>Managing scalable and secure infrastructure for AI-driven voice agent applications.</li>
-                            <li>Designing and maintaining CI/CD pipelines to support rapid AI model updates and application deployments.</li>
-                            <li>Deploying and managing containerized AI services using Docker and Kubernetes on AWS.</li>
-                            <li>Architecting AWS infrastructure including EC2, RDS, S3, IAM, VPC, ALB, and CloudWatch.</li>
-                            <li>Implementing monitoring and alerting using Grafana and Prometheus.</li>
-                            <li>Optimizing container resource allocation for AI workloads.</li>
-                            <li>Strengthening IAM-based access controls and deployment security.</li>
-                            <li>Improving deployment reliability and production stability through automation.</li>
-                        </ul>
-                    </div>
+        <!-- Architecture Showcase -->
+        <section id="architecture" class="py-24 relative">
+            <div class="absolute inset-0 bg-white/40 dark:bg-slate-900/60 backdrop-blur-3xl border-y border-white/50 z-0"></div>
+            <div class="max-w-7xl mx-auto px-6 md:px-8 relative z-10">
+                <div class="flex flex-col items-center mb-16" data-aos="fade-up">
+                    <div class="p-3 bg-rose-100 text-rose-600 rounded-2xl mb-4"><i data-lucide="share-2"
+                            class="w-8 h-8"></i></div>
+                    <h2 class="text-4xl md:text-5xl font-extrabold text-slate-900 dark:text-white tracking-tight">Architecture Showcase
+                    </h2>
+                    <p class="text-lg text-slate-600 dark:text-slate-300 mt-4">System designs and deployment workflows.</p>
                 </div>
-
-                <!-- Experience 2 - Vrinsoft -->
-                <div class="timeline-item" data-aos="fade-up">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <div class="timeline-date">July 2025 – Oct 2025</div>
-                        <h3 class="timeline-title">DevOps Engineer</h3>
-                        <div class="timeline-company">Vrinsoft Technology Pvt. Ltd</div>
-                        <ul class="timeline-description">
-                            <li>Designed and maintained scalable CI/CD pipelines using Jenkins, GitHub Actions, and GitLab CI/CD.</li>
-                            <li>Deployed containerized applications using Docker and Kubernetes.</li>
-                            <li>Implemented Auto Scaling and ECS-based deployments.</li>
-                            <li>Managed AWS services including EC2, RDS, S3, IAM, VPC, ALB.</li>
-                            <li>Integrated SonarQube for static code analysis.</li>
-                            <li>Improved deployment stability through automated validation pipelines.</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <!-- Experience 3 - Sigma Solve -->
-                <div class="timeline-item" data-aos="fade-up">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <div class="timeline-date">Dec 2023 – June 2025</div>
-                        <h3 class="timeline-title">DevOps Engineer</h3>
-                        <div class="timeline-company">Sigma Solve, Inc.</div>
-                        <ul class="timeline-description">
-                            <li>Designed and maintained CI/CD pipelines across multiple tech stacks.</li>
-                            <li>Deployed FastAPI, AI/ML, and microservice-based applications integrated with RabbitMQ, Redis, and Celery.</li>
-                            <li>Managed Node.js, Next.js, .NET MVC, PHP, and Laravel deployments.</li>
-                            <li>Implemented monitoring using Grafana, Prometheus, New Relic, and CloudWatch.</li>
-                            <li>Integrated DevSecOps practices and maintained SonarQube quality gates.</li>
-                            <li>Resolved P1–P3 production incidents and documented infrastructure processes.</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <!-- Education 1 -->
-                <div class="timeline-item" data-aos="fade-up">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <div class="timeline-date">2022 – 2024</div>
-                        <h3 class="timeline-title">Master of Computer Applications (MCA)</h3>
-                        <div class="timeline-company">MIT World Peace University, Pune</div>
-                    </div>
-                </div>
-
-                <!-- Education 2 -->
-                <div class="timeline-item" data-aos="fade-up">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <div class="timeline-date">2019 – 2022</div>
-                        <h3 class="timeline-title">Bachelor of Computer Application</h3>
-                        <div class="timeline-company">SP College, Mohanlal Sukhadia University, Udaipur</div>
-                    </div>
-                </div>
-
-                <!-- Certifications -->
-                <div class="timeline-item" data-aos="fade-up">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <h3 class="timeline-title">Certifications</h3>
-                        <ul class="timeline-description">
-                            <li>AWS Cloud Technical Essentials - edX</li>
-                            <li>AWS Academy Graduate - AWS Academy Cloud Architecting</li>
-                            <li>AWS Certified Solutions Architect Associate (SAA-C03) – Udemy</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Professional Focus - 2026 Section -->
-    <section id="professional-focus" class="skills section">
-        <div class="container">
-            <h2 class="section-title" data-aos="fade-up">Professional Focus – 2026</h2>
-            <p class="section-subtitle" data-aos="fade-up">Current areas of expertise and growth</p>
-            <div class="skills-grid">
-                <div class="skill-card" data-aos="zoom-in" data-aos-delay="100">
-                    <div class="skill-icon">🚀</div>
-                    <ul class="skill-list">
-                        <li>AI Infrastructure Engineering</li>
-                        <li>Cloud-Native Architecture</li>
-                        <li>Kubernetes Platform Engineering</li>
-                        <li>DevSecOps Automation</li>
-                        <li>Observability & Reliability Engineering</li>
-                        <li>Scalable Event-Driven Systems</li>
-                        <li>Infrastructure for Agentic AI Systems</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="contact section">
-        <div class="container">
-            <h2 class="section-title" data-aos="fade-up">Get In Touch</h2>
-            <p class="section-subtitle" data-aos="fade-up">Let's collaborate on your next project</p>
-            
-            <div class="contact-grid">
-                <!-- Contact Info -->
-                <div class="contact-info" data-aos="fade-right">
-                    <div class="contact-item">
-                        <div class="contact-icon">📍</div>
-                        <div class="contact-details">
-                            <h3>Location</h3>
-                            <p>Pune, India</p>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="p-4 glass-card rounded-[2rem]" data-aos="fade-up" data-aos-delay="100">
+                        <div
+                            class="diagram-placeholder rounded-2xl aspect-[4/3] flex flex-col items-center justify-center p-8 text-center bg-white/50 dark:bg-slate-800/50 group/diag">
+                            <i data-lucide="image-plus"
+                                class="w-12 h-12 text-slate-400 mb-4 group-hover/diag:scale-110 transition-transform"></i>
+                            <span class="text-slate-500 dark:text-slate-400 font-bold mb-2">AWS 3-Tier Architecture</span>
+                            <span class="text-slate-400 text-xs">Upload diagram image here</span>
                         </div>
                     </div>
-                    <div class="contact-item">
-                        <div class="contact-icon">📧</div>
-                        <div class="contact-details">
-                            <h3>Email</h3>
-                            <p><a href="mailto:jigyashu2001@gmail.com">jigyashu2001@gmail.com</a></p>
+                    <div class="p-4 glass-card rounded-[2rem]" data-aos="fade-up" data-aos-delay="200">
+                        <div
+                            class="diagram-placeholder rounded-2xl aspect-[4/3] flex flex-col items-center justify-center p-8 text-center bg-white/50 dark:bg-slate-800/50 group/diag">
+                            <i data-lucide="image-plus"
+                                class="w-12 h-12 text-slate-400 mb-4 group-hover/diag:scale-110 transition-transform"></i>
+                            <span class="text-slate-500 dark:text-slate-400 font-bold mb-2">Docker Deployment Flow</span>
+                            <span class="text-slate-400 text-xs">Upload diagram image here</span>
                         </div>
-                    </div>
-                    <div class="contact-item">
-                        <div class="contact-icon">📱</div>
-                        <div class="contact-details">
-                            <h3>Phone</h3>
-                            <p><a href="tel:+918619708469">+91 8619708469</a></p>
-                        </div>
-                    </div>
-                    <div class="social-links">
-                        <a href="https://github.com/Jigyasusinghchouhan" target="_blank" class="social-link" aria-label="GitHub">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
-                            </svg>
-                        </a>
-                        <a href="https://www.linkedin.com/in/jigyasusinghchouahn/" target="_blank" class="social-link" aria-label="LinkedIn">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
-                            </svg>
-                        </a>
-                        <a href="https://www.instagram.com/jigyasu_singh_/" target="_blank" class="social-link" aria-label="Instagram">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
-                            </svg>
-                        </a>
                     </div>
                 </div>
-
-                <!-- Contact Form -->
-                <form class="contact-form" data-aos="fade-left" id="contact-form">
-                    <div class="form-group">
-                        <input type="text" name="name" placeholder="Your Name" required>
-                    </div>
-                    <div class="form-group">
-                        <input type="email" name="email" placeholder="Your Email" required>
-                    </div>
-                    <div class="form-group">
-                        <input type="text" name="subject" placeholder="Subject" required>
-                    </div>
-                    <div class="form-group">
-                        <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
-                    </div>
-                    <button type="submit" class="btn btn-primary submit-btn">
-                        <span class="btn-text">Send Message</span>
-                        <span class="btn-ripple"></span>
-                    </button>
-                </form>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <p>&copy; 2026 Jigyasu Singh Chouhan. All rights reserved.</p>
-                <button id="back-to-top" class="back-to-top" aria-label="Back to top">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M12 19V5M5 12l7-7 7 7"/>
-                    </svg>
-                </button>
+        <!-- Experience -->
+        <section id="experience" class="py-28 relative">
+            <div class="max-w-4xl mx-auto px-6 md:px-8 relative z-10">
+                <div class="flex flex-col items-center mb-20" data-aos="fade-up">
+                    <div class="p-3 bg-violet-100 text-violet-600 rounded-2xl mb-4"><i data-lucide="history"
+                            class="w-8 h-8"></i></div>
+                    <h2 class="text-4xl md:text-5xl font-extrabold text-slate-900 dark:text-white tracking-tight">Professional Timeline
+                    </h2>
+                </div>
+
+                <div class="space-y-0 relative">
+                    <div
+                        class="absolute left-[7px] top-4 bottom-0 w-[2px] bg-gradient-to-b from-violet-400 via-slate-200 to-transparent rounded-full">
+                    </div>
+
+                    <div class="relative pl-12 pb-16" data-aos="fade-up">
+                        <div
+                            class="absolute left-0 top-1.5 w-4 h-4 rounded-full bg-white dark:bg-slate-800 border-4 border-violet-500 shadow-[0_0_10px_rgba(124,58,237,0.5)] z-10">
+                        </div>
+                        <div class="mb-3 flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+                            <h3 class="text-2xl font-bold text-slate-900 dark:text-white">Associate DevOps Engineer @ Rootle Voconv
+                                Private Limited</h3>
+                            <span
+                                class="inline-flex items-center gap-1 px-3 py-1 bg-violet-100 text-violet-700 rounded-lg text-xs font-bold mono tracking-wide"><i
+                                    data-lucide="calendar" class="w-3 h-3"></i> 2025 — PRESENT</span>
+                        </div>
+                        <p
+                            class="text-violet-600/80 mb-6 text-sm font-medium italic bg-violet-50/50 inline-flex items-center gap-2 px-4 py-2 rounded-lg">
+                            <i data-lucide="quote" class="w-4 h-4"></i> Hardening GPU-backed AWS infrastructure for
+                            real-time Agentic AI systems.</p>
+                        <ul class="text-[15px] text-slate-600 dark:text-slate-300 space-y-4 leading-relaxed font-medium">
+                            <li class="flex gap-4"><i data-lucide="arrow-right"
+                                    class="w-5 h-5 text-violet-500 flex-shrink-0 mt-0.5"></i> Reduced inference latency
+                                significantly through vLLM serving optimization.</li>
+                            <li class="flex gap-4"><i data-lucide="arrow-right"
+                                    class="w-5 h-5 text-violet-500 flex-shrink-0 mt-0.5"></i> Built internal SRE
+                                platform for real-time GPU cost tracking and lifecycle management.</li>
+                            <li class="flex gap-4"><i data-lucide="arrow-right"
+                                    class="w-5 h-5 text-violet-500 flex-shrink-0 mt-0.5"></i> Orchestrated 99.9% uptime
+                                SLA using multi-AZ EKS architecture.</li>
+                        </ul>
+                        <div class="mt-6 flex gap-2">
+                            <span
+                                class="text-xs font-bold text-slate-500 dark:text-slate-400 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 px-3 py-1.5 rounded-lg flex items-center gap-1 shadow-sm"><i
+                                    data-lucide="server" class="w-3 h-3"></i> AWS EKS</span>
+                            <span
+                                class="text-xs font-bold text-slate-500 dark:text-slate-400 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 px-3 py-1.5 rounded-lg flex items-center gap-1 shadow-sm"><i
+                                    data-lucide="zap" class="w-3 h-3"></i> vLLM</span>
+                            <span
+                                class="text-xs font-bold text-slate-500 dark:text-slate-400 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 px-3 py-1.5 rounded-lg flex items-center gap-1 shadow-sm"><i
+                                    data-lucide="cpu" class="w-3 h-3"></i> GPU Ops</span>
+                        </div>
+                    </div>
+
+                    <div class="relative pl-12 pb-16" data-aos="fade-up">
+                        <div
+                            class="absolute left-0 top-1.5 w-4 h-4 rounded-full bg-white dark:bg-slate-800 border-4 border-slate-300 dark:border-slate-600 z-10 transition-colors hover:border-fuchsia-400">
+                        </div>
+                        <div class="mb-3 flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+                            <h3 class="text-2xl font-bold text-slate-800 dark:text-slate-100">DevOps Engineer @ Vrinsoft Technology Pvt. Ltd
+                            </h3>
+                            <span class="text-xs font-bold text-slate-400 mono tracking-wide flex items-center gap-1"><i
+                                    data-lucide="calendar" class="w-3 h-3"></i> 2025</span>
+                        </div>
+                        <ul class="text-[15px] text-slate-600 dark:text-slate-300 space-y-4 leading-relaxed font-medium mt-4">
+                            <li class="flex gap-4"><i data-lucide="arrow-right"
+                                    class="w-5 h-5 text-slate-400 flex-shrink-0 mt-0.5"></i> Scaled ECS deployments with
+                                Auto-Scaling mechanisms.</li>
+                            <li class="flex gap-4"><i data-lucide="arrow-right"
+                                    class="w-5 h-5 text-slate-400 flex-shrink-0 mt-0.5"></i> Engineered multi-stage
+                                Jenkins rollback logic for high-traffic peak handling.</li>
+                            <li class="flex gap-4"><i data-lucide="arrow-right"
+                                    class="w-5 h-5 text-slate-400 flex-shrink-0 mt-0.5"></i> Containerized critical
+                                application services.</li>
+                        </ul>
+                        <div class="mt-6 flex gap-2">
+                            <span
+                                class="text-xs font-bold text-slate-500 dark:text-slate-400 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 px-3 py-1.5 rounded-lg flex items-center gap-1 shadow-sm"><i
+                                    data-lucide="server" class="w-3 h-3"></i> AWS ECS</span>
+                            <span
+                                class="text-xs font-bold text-slate-500 dark:text-slate-400 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 px-3 py-1.5 rounded-lg flex items-center gap-1 shadow-sm"><i
+                                    data-lucide="git-merge" class="w-3 h-3"></i> Jenkins</span>
+                            <span
+                                class="text-xs font-bold text-slate-500 dark:text-slate-400 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 px-3 py-1.5 rounded-lg flex items-center gap-1 shadow-sm"><i
+                                    data-lucide="box" class="w-3 h-3"></i> Docker</span>
+                        </div>
+                    </div>
+
+                    <div class="relative pl-12 pb-8" data-aos="fade-up">
+                        <div
+                            class="absolute left-0 top-1.5 w-4 h-4 rounded-full bg-white dark:bg-slate-800 border-4 border-slate-300 dark:border-slate-600 z-10 transition-colors hover:border-blue-400">
+                        </div>
+                        <div class="mb-3 flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+                            <h3 class="text-2xl font-bold text-slate-800 dark:text-slate-100">DevOps Engineer @ Sigma Solve, Inc.</h3>
+                            <span class="text-xs font-bold text-slate-400 mono tracking-wide flex items-center gap-1"><i
+                                    data-lucide="calendar" class="w-3 h-3"></i> 2023 — 2025</span>
+                        </div>
+                        <p
+                            class="text-slate-500 dark:text-slate-400 mb-6 text-sm font-medium italic bg-slate-50/80 inline-flex items-center gap-2 px-4 py-2 rounded-lg">
+                            <i data-lucide="quote" class="w-4 h-4"></i> Owned operations for 10+ production stacks
+                            spanning .NET, Node.js, and Python.</p>
+                        <ul class="text-[15px] text-slate-600 dark:text-slate-300 space-y-4 leading-relaxed font-medium">
+                            <li class="flex gap-4"><i data-lucide="arrow-right"
+                                    class="w-5 h-5 text-slate-400 flex-shrink-0 mt-0.5"></i> Migrated legacy CI/CD to
+                                GitLab CI, tripling release frequency.</li>
+                            <li class="flex gap-4"><i data-lucide="arrow-right"
+                                    class="w-5 h-5 text-slate-400 flex-shrink-0 mt-0.5"></i> Integrated SAST
+                                (SonarQube/Trivy) gates reducing critical vulns to zero.</li>
+                            <li class="flex gap-4"><i data-lucide="arrow-right"
+                                    class="w-5 h-5 text-slate-400 flex-shrink-0 mt-0.5"></i> Reduced MTTD by 40% via
+                                custom Grafana/Prometheus observability stack.</li>
+                        </ul>
+                        <div class="mt-6 flex gap-2">
+                            <span
+                                class="text-xs font-bold text-slate-500 dark:text-slate-400 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 px-3 py-1.5 rounded-lg flex items-center gap-1 shadow-sm"><i
+                                    data-lucide="gitlab" class="w-3 h-3"></i> GitLab CI</span>
+                            <span
+                                class="text-xs font-bold text-slate-500 dark:text-slate-400 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 px-3 py-1.5 rounded-lg flex items-center gap-1 shadow-sm"><i
+                                    data-lucide="bar-chart-2" class="w-3 h-3"></i> Prometheus</span>
+                            <span
+                                class="text-xs font-bold text-slate-500 dark:text-slate-400 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 px-3 py-1.5 rounded-lg flex items-center gap-1 shadow-sm"><i
+                                    data-lucide="search" class="w-3 h-3"></i> SonarQube</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- GitHub Stats & Open Source -->
+        <section class="py-24 relative">
+            <div class="absolute inset-0 bg-white/40 dark:bg-slate-900/60 backdrop-blur-3xl border-y border-white/50 z-0"></div>
+            <div class="max-w-7xl mx-auto px-6 md:px-8 relative z-10">
+                <div class="flex flex-col items-center mb-12" data-aos="fade-up">
+                    <div class="p-3 bg-slate-100 dark:bg-slate-800/50 text-slate-600 dark:text-slate-300 rounded-2xl mb-4"><i data-lucide="github"
+                            class="w-8 h-8"></i></div>
+                    <h2 class="text-4xl font-extrabold text-slate-900 dark:text-white tracking-tight">GitHub & Contributions</h2>
+                </div>
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8" data-aos="fade-up" data-aos-delay="100">
+                    <div
+                        class="glass-card p-4 rounded-3xl flex items-center justify-center min-h-[200px] hover:shadow-xl transition-shadow">
+                        <img src="https://github-readme-stats.vercel.app/api?username=Jigyasusinghchouhan&show_icons=true&theme=transparent&hide_border=true&title_color=7c3aed&text_color=475569&icon_color=d946ef"
+                            alt="GitHub Stats" class="w-full max-w-md">
+                    </div>
+                    <div
+                        class="glass-card p-4 rounded-3xl flex items-center justify-center min-h-[200px] hover:shadow-xl transition-shadow">
+                        <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Jigyasusinghchouhan&layout=compact&theme=transparent&hide_border=true&title_color=7c3aed&text_color=475569"
+                            alt="Top Languages" class="w-full max-w-md">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Technical Blogs -->
+        <section id="blogs" class="py-24">
+            <div class="max-w-7xl mx-auto px-6 md:px-8">
+                <div class="flex items-end justify-between mb-12" data-aos="fade-up">
+                    <div class="flex items-center gap-4">
+                        <div class="p-3 bg-amber-100 text-amber-600 rounded-2xl"><i data-lucide="book-open"
+                                class="w-8 h-8"></i></div>
+                        <h2 class="text-4xl font-extrabold text-slate-900 dark:text-white tracking-tight">Technical Writing</h2>
+                    </div>
+                    <span class="text-amber-600 font-bold text-sm hidden sm:flex items-center gap-2"><i
+                            data-lucide="share-2" class="w-4 h-4"></i> Knowledge Sharing</span>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <!-- Blog Card -->
+                    <a href="#"
+                        class="p-8 glass-card rounded-3xl group cursor-pointer block hover:scale-[1.02] transition-transform"
+                        data-aos="fade-up" data-aos-delay="100">
+                        <span
+                            class="text-xs font-bold text-violet-500 uppercase tracking-widest mb-3 flex items-center gap-1"><i
+                                data-lucide="cpu" class="w-3.5 h-3.5"></i> AI Platform</span>
+                        <h3
+                            class="font-extrabold text-xl text-slate-900 dark:text-white group-hover:text-violet-600 transition-colors mb-4">
+                            How I deployed LLMs on GPU infrastructure</h3>
+                        <p class="text-sm text-slate-600 dark:text-slate-300 mb-6 line-clamp-3">A deep dive into optimizing vLLM for
+                            production inference and reducing overall cloud compute costs.</p>
+                        <div
+                            class="flex items-center gap-2 text-sm font-bold text-violet-600 group-hover:translate-x-2 transition-transform">
+                            Read article <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                        </div>
+                    </a>
+                    <a href="#"
+                        class="p-8 glass-card rounded-3xl group cursor-pointer block hover:scale-[1.02] transition-transform"
+                        data-aos="fade-up" data-aos-delay="200">
+                        <span
+                            class="text-xs font-bold text-fuchsia-500 uppercase tracking-widest mb-3 flex items-center gap-1"><i
+                                data-lucide="settings" class="w-3.5 h-3.5"></i> DevOps</span>
+                        <h3
+                            class="font-extrabold text-xl text-slate-900 dark:text-white group-hover:text-fuchsia-600 transition-colors mb-4">
+                            CI/CD Best Practices for 2026</h3>
+                        <p class="text-sm text-slate-600 dark:text-slate-300 mb-6 line-clamp-3">Designing automated deployment pipelines
+                            that eliminate human error and ensure zero-downtime rollouts.</p>
+                        <div
+                            class="flex items-center gap-2 text-sm font-bold text-fuchsia-600 group-hover:translate-x-2 transition-transform">
+                            Read article <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                        </div>
+                    </a>
+                    <a href="#"
+                        class="p-8 glass-card rounded-3xl group cursor-pointer block hover:scale-[1.02] transition-transform"
+                        data-aos="fade-up" data-aos-delay="300">
+                        <span
+                            class="text-xs font-bold text-blue-500 uppercase tracking-widest mb-3 flex items-center gap-1"><i
+                                data-lucide="activity" class="w-3.5 h-3.5"></i> Observability</span>
+                        <h3
+                            class="font-extrabold text-xl text-slate-900 dark:text-white group-hover:text-blue-600 transition-colors mb-4">
+                            Observability with Grafana & Prometheus</h3>
+                        <p class="text-sm text-slate-600 dark:text-slate-300 mb-6 line-clamp-3">Building a central SRE dashboard to monitor
+                            distributed systems and proactively manage incidents.</p>
+                        <div
+                            class="flex items-center gap-2 text-sm font-bold text-blue-600 group-hover:translate-x-2 transition-transform">
+                            Read article <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                        </div>
+                    </a>
+                    <a href="#"
+                        class="p-8 glass-card rounded-3xl group cursor-pointer block hover:scale-[1.02] transition-transform"
+                        data-aos="fade-up" data-aos-delay="400">
+                        <span
+                            class="text-xs font-bold text-emerald-500 uppercase tracking-widest mb-3 flex items-center gap-1"><i
+                                data-lucide="cloud" class="w-3.5 h-3.5"></i> Cloud</span>
+                        <h3
+                            class="font-extrabold text-xl text-slate-900 dark:text-white group-hover:text-emerald-600 transition-colors mb-4">
+                            AWS Deployment Architecture Patterns</h3>
+                        <p class="text-sm text-slate-600 dark:text-slate-300 mb-6 line-clamp-3">Standardizing scalable infrastructure using
+                            Terraform and AWS best practices.</p>
+                        <div
+                            class="flex items-center gap-2 text-sm font-bold text-emerald-600 group-hover:translate-x-2 transition-transform">
+                            Read article <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                        </div>
+                    </a>
+                    <a href="#"
+                        class="p-8 glass-card rounded-3xl group cursor-pointer block hover:scale-[1.02] transition-transform"
+                        data-aos="fade-up" data-aos-delay="500">
+                        <span
+                            class="text-xs font-bold text-amber-500 uppercase tracking-widest mb-3 flex items-center gap-1"><i
+                                data-lucide="box" class="w-3.5 h-3.5"></i> Containers</span>
+                        <h3
+                            class="font-extrabold text-xl text-slate-900 dark:text-white group-hover:text-amber-600 transition-colors mb-4">
+                            Docker Image Optimization</h3>
+                        <p class="text-sm text-slate-600 dark:text-slate-300 mb-6 line-clamp-3">Techniques for minimizing container
+                            footprint to speed up pipeline execution and enhance security.</p>
+                        <div
+                            class="flex items-center gap-2 text-sm font-bold text-amber-600 group-hover:translate-x-2 transition-transform">
+                            Read article <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                        </div>
+                    </a>
+                    <a href="#"
+                        class="p-8 glass-card rounded-3xl group cursor-pointer block hover:scale-[1.02] transition-transform"
+                        data-aos="fade-up" data-aos-delay="600">
+                        <span
+                            class="text-xs font-bold text-rose-500 uppercase tracking-widest mb-3 flex items-center gap-1"><i
+                                data-lucide="shield-check" class="w-3.5 h-3.5"></i> SRE</span>
+                        <h3
+                            class="font-extrabold text-xl text-slate-900 dark:text-white group-hover:text-rose-600 transition-colors mb-4">
+                            Production Deployment Lessons</h3>
+                        <p class="text-sm text-slate-600 dark:text-slate-300 mb-6 line-clamp-3">Key takeaways from handling P1 incidents and
+                            ensuring high availability during peak traffic.</p>
+                        <div
+                            class="flex items-center gap-2 text-sm font-bold text-rose-600 group-hover:translate-x-2 transition-transform">
+                            Read article <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Certifications -->
+        <section id="certifications" class="py-24 relative">
+            <div class="absolute inset-0 bg-white/40 dark:bg-slate-900/60 backdrop-blur-3xl border-y border-white/50 z-0"></div>
+            <div class="max-w-7xl mx-auto px-6 md:px-8 relative z-10">
+                <div class="flex flex-col items-center mb-12" data-aos="fade-up">
+                    <div class="p-3 bg-orange-100 text-orange-600 rounded-2xl mb-4"><i data-lucide="award"
+                            class="w-8 h-8"></i></div>
+                    <h2 class="text-4xl font-extrabold text-slate-900 dark:text-white tracking-tight">Certifications</h2>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6" data-aos="fade-up" data-aos-delay="100">
+                    <div
+                        class="glass-card p-6 rounded-2xl flex items-center gap-4 hover:scale-105 transition-transform cursor-default">
+                        <div
+                            class="w-12 h-12 bg-orange-100 text-orange-600 rounded-full flex items-center justify-center flex-shrink-0">
+                            <i data-lucide="shield" class="w-6 h-6"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-slate-900 dark:text-white">AWS Cloud Tech Essentials</h4>
+                            <span class="text-sm text-slate-500 dark:text-slate-400">edX / Coursera</span>
+                        </div>
+                    </div>
+                    <div
+                        class="glass-card p-6 rounded-2xl flex items-center gap-4 hover:scale-105 transition-transform cursor-default">
+                        <div
+                            class="w-12 h-12 bg-orange-100 text-orange-600 rounded-full flex items-center justify-center flex-shrink-0">
+                            <i data-lucide="cloud" class="w-6 h-6"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-slate-900 dark:text-white">AWS Academy Architecting</h4>
+                            <span class="text-sm text-slate-500 dark:text-slate-400">AWS Academy</span>
+                        </div>
+                    </div>
+                    <div
+                        class="glass-card p-6 rounded-2xl flex items-center gap-4 hover:scale-105 transition-transform cursor-default">
+                        <div
+                            class="w-12 h-12 bg-orange-100 text-orange-600 rounded-full flex items-center justify-center flex-shrink-0">
+                            <i data-lucide="book-open" class="w-6 h-6"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-slate-900 dark:text-white">AWS SAA-C03 (In Progress)</h4>
+                            <span class="text-sm text-slate-500 dark:text-slate-400">Udemy</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+                <!-- Terminal Section -->
+        <section class="py-24 relative overflow-hidden">
+            <div class="absolute inset-0 bg-slate-900 dark:bg-black z-0 skew-y-3 transform origin-bottom-left scale-110"></div>
+            <div class="max-w-4xl mx-auto px-6 md:px-8 relative z-10" data-aos="fade-up">
+                <div class="flex items-center gap-4 mb-8">
+                    <div class="p-3 bg-emerald-500/20 text-emerald-400 rounded-2xl"><i data-lucide="terminal-square" class="w-8 h-8"></i></div>
+                    <h2 class="text-3xl md:text-4xl font-extrabold text-white tracking-tight">Interactive Terminal</h2>
+                </div>
+                <div class="bg-slate-950 rounded-xl overflow-hidden border border-slate-800 shadow-2xl font-mono text-sm">
+                    <!-- Window Controls -->
+                    <div class="flex items-center gap-2 px-4 py-3 bg-slate-900 border-b border-slate-800">
+                        <div class="w-3 h-3 rounded-full bg-red-500"></div>
+                        <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
+                        <div class="w-3 h-3 rounded-full bg-green-500"></div>
+                        <span class="ml-4 text-slate-500 text-xs">jigyasu@platform-eng:~</span>
+                    </div>
+                    <!-- Terminal Body -->
+                    <div class="p-6 h-[300px] overflow-y-auto" id="terminal-body" onclick="document.getElementById('term-input').focus()">
+                        <div class="text-emerald-400 mb-4">Welcome to Jigyasu's Interactive Portfolio Shell v1.0.0<br>Type 'help' to see available commands.</div>
+                        <div id="term-output"></div>
+                        <div class="flex items-center mt-2">
+                            <span class="text-emerald-500 mr-2">jigyasu@platform-eng:~$</span>
+                            <input type="text" id="term-input" class="flex-1 bg-transparent border-none outline-none text-slate-300 focus:ring-0 p-0 m-0" autocomplete="off" spellcheck="false">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-24">
+            <div class="max-w-4xl mx-auto px-6 md:px-8" data-aos="fade-up">
+                <div class="text-center mb-16">
+                    <div class="w-16 h-16 bg-violet-100 dark:bg-violet-900/50 text-violet-600 dark:text-violet-400 rounded-full flex items-center justify-center mx-auto mb-8 animate-bounce">
+                        <i data-lucide="mail" class="w-8 h-8"></i>
+                    </div>
+                    <h2 class="text-4xl md:text-5xl font-extrabold text-slate-900 dark:text-white mb-6 tracking-tight">Ready to scale your infrastructure?</h2>
+                    <p class="text-xl text-slate-600 dark:text-slate-300">I'm currently open for new opportunities. Let's discuss how I can bring enterprise-grade reliability to your production systems.</p>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12 text-left">
+                    <div class="glass-card p-8 rounded-3xl">
+                        <h3 class="text-2xl font-bold text-slate-900 dark:text-white mb-6">Send a Message</h3>
+                        <form action="https://formspree.io/f/mqazqjyl" method="POST" class="space-y-4">
+                            <div>
+                                <label class="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-1">Name</label>
+                                <input type="text" name="name" required class="w-full px-4 py-3 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 focus:outline-none focus:ring-2 focus:ring-violet-500 dark:text-white transition-colors">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-1">Email</label>
+                                <input type="email" name="email" required class="w-full px-4 py-3 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 focus:outline-none focus:ring-2 focus:ring-violet-500 dark:text-white transition-colors">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-1">Message</label>
+                                <textarea name="message" rows="4" required class="w-full px-4 py-3 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 focus:outline-none focus:ring-2 focus:ring-violet-500 dark:text-white resize-none transition-colors"></textarea>
+                            </div>
+                            <button type="submit" class="w-full connect-btn text-white px-6 py-3 rounded-xl text-sm font-bold flex items-center justify-center gap-2 group">
+                                <i data-lucide="send" class="w-4 h-4 group-hover:-translate-y-1 group-hover:translate-x-1 transition-transform"></i> Send Message
+                            </button>
+                        </form>
+                    </div>
+                    <div class="flex flex-col justify-center space-y-8 pl-0 md:pl-8">
+                        <div>
+                            <h4 class="text-lg font-bold text-slate-900 dark:text-white mb-2 flex items-center gap-2"><i data-lucide="mail" class="w-5 h-5 text-violet-500"></i> Direct Email</h4>
+                            <a href="mailto:jigyashu2001@gmail.com" class="text-slate-600 dark:text-slate-400 hover:text-violet-600 dark:hover:text-violet-400 font-medium">jigyashu2001@gmail.com</a>
+                        </div>
+                        <div>
+                            <h4 class="text-lg font-bold text-slate-900 dark:text-white mb-2 flex items-center gap-2"><i data-lucide="map-pin" class="w-5 h-5 text-violet-500"></i> Location</h4>
+                            <p class="text-slate-600 dark:text-slate-400 font-medium">Pune, India (Available for Remote)</p>
+                        </div>
+                        <div>
+                            <h4 class="text-lg font-bold text-slate-900 dark:text-white mb-4 flex items-center gap-2"><i data-lucide="file-text" class="w-5 h-5 text-violet-500"></i> Resume</h4>
+                            <a href="./Jigyasu%20Singh%20Chouhan_2026.pdf" target="_blank" class="inline-flex px-6 py-3 rounded-xl text-sm font-bold bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-200 hover:bg-slate-50 dark:hover:bg-slate-700 transition-all shadow-sm items-center gap-2 group">
+                                <i data-lucide="download" class="w-4 h-4 group-hover:translate-y-1 transition-transform"></i>
+                                Download PDF
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="py-16 relative">
+        <div class="absolute inset-0 bg-white/60 dark:bg-slate-900/60 backdrop-blur-xl border-t border-white/80 z-0"></div>
+        <div class="relative z-10 text-center px-6">
+
+            <!-- Social Links -->
+            <div class="flex justify-center gap-6 mb-10">
+                <a href="https://github.com/Jigyasusinghchouhan" target="_blank" aria-label="GitHub"
+                    class="text-slate-400 hover:text-violet-600 transition-all p-3 hover:bg-violet-50 rounded-full hover:scale-110">
+                    <i data-lucide="github" class="w-6 h-6"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/jigyasusinghchouahn/" target="_blank" aria-label="LinkedIn"
+                    class="text-slate-400 hover:text-violet-600 transition-all p-3 hover:bg-violet-50 rounded-full hover:scale-110">
+                    <i data-lucide="linkedin" class="w-6 h-6"></i>
+                </a>
+            </div>
+
+            <div
+                class="w-12 h-12 bg-gradient-to-br from-violet-100 to-fuchsia-100 rounded-full flex items-center justify-center mx-auto mb-6 shadow-inner">
+                <span class="text-violet-600 font-bold">J</span>
+            </div>
+            <p
+                class="text-slate-400 text-[11px] font-bold tracking-[0.3em] uppercase mono mb-2 flex items-center justify-center gap-1">
+                <i data-lucide="copyright" class="w-3 h-3"></i> 2026 JIGYASU SINGH CHOUHAN
+            </p>
+                        <div class="mt-6 inline-flex items-center gap-2 px-3 py-1.5 bg-slate-100 dark:bg-slate-800 rounded-full border border-slate-200 dark:border-slate-700">
+                <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+                <span class="text-xs font-bold text-slate-600 dark:text-slate-400 mono tracking-wider">STATUS: ALL SYSTEMS OPERATIONAL | UPTIME: <span id="uptime-counter">99.999%</span></span>
             </div>
         </div>
     </footer>
 
-    <!-- Cursor Glow Effect -->
-    <div class="cursor-glow" id="cursor-glow"></div>
-
     <!-- Scripts -->
-    <script src="script.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        // Initialize Lucide Icons
+        lucide.createIcons();
+
+        // Initialize AOS animations
+        AOS.init({
+            duration: 800,
+            once: true,
+            offset: 50,
+        });
+    </script>
+
+    <script>
+        // Terminal Logic
+        const termInput = document.getElementById('term-input');
+        const termOutput = document.getElementById('term-output');
+        
+        const commands = {
+            'help': 'Available commands: <br> - <b>whoami</b>: Display user info <br> - <b>skills</b>: List technical skills <br> - <b>deploy</b>: Trigger a dummy production deployment <br> - <b>clear</b>: Clear terminal',
+            'whoami': 'Jigyasu Singh Chouhan <br> Role: DevOps & Platform Engineer <br> Location: Pune, India',
+            'skills': 'AWS, Azure, Docker, Kubernetes, Terraform, Python, Bash, CI/CD, Grafana, vLLM',
+            'deploy': 'Initiating deployment pipeline... <br> [1/3] Building containers... <span class="text-green-400">OK</span> <br> [2/3] Running tests... <span class="text-green-400">OK</span> <br> [3/3] Deploying to EKS cluster... <span class="text-green-400">SUCCESS</span> <br> Deployment completed in 2.4s.',
+        };
+
+        if (termInput) {
+            termInput.addEventListener('keypress', function (e) {
+                if (e.key === 'Enter') {
+                    const val = this.value.trim().toLowerCase();
+                    let response = '';
+                    
+                    if (val === 'clear') {
+                        termOutput.innerHTML = '';
+                        this.value = '';
+                        return;
+                    }
+                    
+                    if (val === '') {
+                        response = '';
+                    } else if (commands[val]) {
+                        response = commands[val];
+                    } else {
+                        response = `bash: ${val}: command not found. Type 'help' for available commands.`;
+                    }
+                    
+                    const newEntry = document.createElement('div');
+                    newEntry.className = 'mb-2';
+                    newEntry.innerHTML = `<span class="text-emerald-500 mr-2">jigyasu@platform-eng:~$</span><span class="text-slate-300">${val}</span><br><div class="text-slate-400 mt-1">${response}</div>`;
+                    
+                    termOutput.appendChild(newEntry);
+                    this.value = '';
+                    
+                    const termBody = document.getElementById('terminal-body');
+                    termBody.scrollTop = termBody.scrollHeight;
+                }
+            });
+        }
+
+        // Uptime counter logic
+        setInterval(() => {
+            const start = new Date("2023-01-01T00:00:00").getTime();
+            const now = new Date().getTime();
+            const diff = now - start;
+            const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const mins = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+            const secs = Math.floor((diff % (1000 * 60)) / 1000);
+            const el = document.getElementById('uptime-counter');
+            if (el) el.innerText = `${days}D ${hours}H ${mins}M ${secs}S`;
+        }, 1000);
+    </script>
 </body>
+
 </html>
